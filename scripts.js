@@ -4,49 +4,39 @@ const registerLink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
 
-// Check login state on page load
-document.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    if (isLoggedIn) {
-        handleLoginState();
-    }
-});
-
 // Function to handle login state
 function handleLoginState() {
-    wrapper.style.display = 'none';
-    btnPopup.textContent = 'Logout';
-    btnPopup.removeEventListener('click', openPopup);
-    btnPopup.addEventListener('click', handleLogout);
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+    if (isLoggedIn) {
+        if (window.location.pathname.includes('index.html')) {
+            window.location.href = 'main.html';
+        } else if (window.location.pathname.includes('main.html')) {
+            if (btnPopup) {
+                btnPopup.textContent = 'Logout';
+                btnPopup.removeEventListener('click', openPopup);
+                btnPopup.addEventListener('click', handleLogout);
+            }
+        }
+    } else {
+        if (btnPopup) {
+            btnPopup.textContent = 'Login';
+            btnPopup.removeEventListener('click', handleLogout);
+            btnPopup.addEventListener('click', redirectToLogin);
+        }
+    }
 }
 
 // Function to handle successful login
 function handleLoginSuccess() {
-    // Hide the entire wrapper container
-    wrapper.style.display = 'none';
-    
-    // Change button text and functionality
-    btnPopup.textContent = 'Logout';
-    btnPopup.removeEventListener('click', openPopup); // Remove existing click event
-    btnPopup.addEventListener('click', handleLogout); // Add new click event for logout
-    
-    // Store login state in local storage
     localStorage.setItem('isLoggedIn', 'true');
+    window.location.href = 'main.html';
 }
 
 // Function to handle logout
 function handleLogout() {
-    // Reset button text and functionality
-    btnPopup.textContent = 'Login';
-    btnPopup.classList.remove('logout'); // Remove class if added
-    btnPopup.removeEventListener('click', handleLogout); // Remove existing click event
-    btnPopup.addEventListener('click', openPopup); // Add new click event for login
-    
-    // Show the wrapper container again
-    wrapper.style.display = 'flex'; // or 'block', depending on your layout
-    
-    // Clear login state from local storage
     localStorage.removeItem('isLoggedIn');
+    window.location.href = 'index.html';
 }
 
 // Function to open popup
@@ -59,28 +49,101 @@ function closePopup() {
     wrapper.classList.remove('active-popup');
 }
 
-// Event listeners
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
-});
+// Function to redirect to index.html with login form open
+function redirectToLogin() {
+    window.location.href = 'index.html?openLogin=true';
+}
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
-});
+// Event listeners for login and registration
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const openLogin = params.get('openLogin') === 'true';
 
-btnPopup.addEventListener('click', openPopup);
-iconClose.addEventListener('click', closePopup);
-
-// Simulate successful login after form submission
-document.querySelector('.form-box.login form').addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent form submission
-    handleLoginSuccess(); // Handle login success
-});
-
-document.addEventListener('click', () => {
-    const audio = document.getElementById('background-music');
-    if (audio.muted) {
-        audio.muted = false;  // Unmute the audio after user interaction
-        audio.play();
+    if (btnPopup) {
+        btnPopup.addEventListener('click', () => {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            if (isLoggedIn) {
+                handleLogout();
+            } else {
+                redirectToLogin(); // Use redirectToLogin function to navigate to index.html
+            }
+        });
     }
+
+    if (registerLink) {
+        registerLink.addEventListener('click', () => {
+            wrapper.classList.add('active');
+        });
+    }
+    
+    if (loginLink) {
+        loginLink.addEventListener('click', () => {
+            wrapper.classList.remove('active');
+        });
+    }
+
+    if (iconClose) {
+        iconClose.addEventListener('click', closePopup);
+    }
+
+    const loginForm = document.querySelector('.form-box.login form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            handleLoginSuccess();
+        });
+    }
+
+    // Show login popup if the URL parameter indicates so
+    if (window.location.pathname.includes('index.html') && openLogin) {
+        openPopup();
+        // Remove the parameter from the URL to prevent reopening the popup on reload
+        const newURL = window.location.href.split('?')[0];
+        window.history.replaceState({}, document.title, newURL);
+    }
+
+    if (window.location.pathname.includes('main.html')) {
+        handleTabNavigation();
+    }
+
+    const audio = document.getElementById('background-music');
+    if (audio) {
+        document.addEventListener('click', () => {
+            if (audio.muted) {
+                audio.muted = false;
+                audio.play();
+            }
+        });
+    }
+
+    handleLoginState();
 });
+
+// Handle tab navigation on main.html
+function handleTabNavigation() {
+    const currentTab = localStorage.getItem('currentTab') || 'home';
+    
+    document.querySelectorAll('.tab-content').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    const activeSection = document.getElementById(currentTab);
+    if (activeSection) {
+        activeSection.style.display = 'block';
+    }
+
+    document.querySelectorAll('.navigation a').forEach(tabLink => {
+        tabLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
+
+            document.querySelectorAll('.tab-content').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(targetTab).style.display = 'block';
+
+            localStorage.setItem('currentTab', targetTab);
+        });
+    });
+}
