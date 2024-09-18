@@ -2,21 +2,18 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
     min-height: 100vh;
-    background: url('Media/background.jpg') no-repeat;
-    background-size: cover;
     background-position: 0 -70px;
 }
 
 header {
-    position: fixed;
+    /* position: absolute; */
+    /* overflow: hidden; */
     top: 0;
     left: 0;
     width: 100%;
@@ -260,4 +257,9 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+.background-image {
+    /* display:flex; */
+    position: absolute;
 }

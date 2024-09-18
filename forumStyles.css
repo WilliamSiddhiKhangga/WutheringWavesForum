@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+/* Just to select color */
+#nothing {
+    background-color: rgb(26, 36, 45);
+}
+
+.add-post-btn button {
+    position: fixed;
+    background-color: rgb(41, 58, 46);
+    bottom: 5%;
+    right: 3%;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    display: block;
+}
+
+.add-post-btn button:hover {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.add-post-text {
+    display: none;
+}
+
+.add-post-btn button:hover + .add-post-text {
+    display: block;
+    color: aqua;
+}
