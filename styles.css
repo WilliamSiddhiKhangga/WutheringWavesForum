@@ -260,6 +260,6 @@ header {
 }
 
 .background-image {
-    /* display:flex; */
+    display: inline-block;
     position: absolute;
 }
