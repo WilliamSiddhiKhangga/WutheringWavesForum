@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum</title>
     <link rel="stylesheet" href="forumStyles.css">
-    <link rel="stylesheet" href="navbarStyles.css">
+    <link rel="stylesheet" href="/navbarStyles.css">
 </head>
 <body onload="highlightNavbar('/forum.html', 'forum'); closePostForm();">
     <script src="forumScripts.js"></script>
-    <script src="navbarScripts.js"></script>
+    <script src="/navbarScripts.js"></script>
 
     <nav class="nav-bar">
         <ul>
-            <li id="home"><a href="/main.html"><img src="Images/home-icon.png"></a><a href="/main.html">Home</a></li>
+            <li id="home"><a href="/main.html"><img src="/Images/home-icon.png"></a><a href="/main.html">Home</a></li>
             <li id="resonators"><a href="/resonators.html">Resonators</a></li>
             <li id="weapons"><a href="/weapons.html">Weapons</a></li>
             <li id="echoes"><a href="/echoes.html">Echoes</a></li>
@@ -23,9 +23,7 @@
 
     <div class="content-container">
         <div class="add-post-btn">
-            <!-- <button onclick="addPost()"></button>
-            <span class="add-post-text">Add Post</span> -->
-            <a><span>Add Post</span></a>
+            <a onclick="addPost()"><span>Add Post</span></a>
         </div>
     
         <!-- Add Post Form -->
