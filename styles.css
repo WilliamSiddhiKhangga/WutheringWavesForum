@@ -9,11 +9,12 @@ body {
     /* display: flex; */
     min-height: 100vh;
     background-position: 0 -70px;
+    background-color: #162938;
+    overflow: hidden;
 }
 
 header {
     /* position: absolute; */
-    /* overflow: hidden; */
     top: 0;
     left: 0;
     width: 100%;
@@ -262,4 +263,6 @@ header {
 .background-image {
     display: inline-block;
     position: absolute;
+    opacity: 70%;
+    z-index: -1;
 }
