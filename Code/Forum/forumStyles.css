@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+/* Just to select color */
+#nothing {
+    background-color: rgb(26, 36, 45);
+}
+
+body {
+    background-color: rgb(26, 36, 45);
+}
+
+.add-post-btn a {
+    position: fixed;
+    background-color: rgb(41, 58, 46);
+    bottom: 5%;
+    right: 3%;
+    border-radius: 30px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.add-post-btn a::before {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-family: OCR-A;
+}
+
+.add-post-btn a:hover {
+    width: 300px;
+    border-radius: 30px;
+    transition-delay: 0.5s;
+}
+
+.add-post-btn span {
+    visibility: hidden;
+    opacity: 0;
+    white-space: nowrap;
+    transition: 0.25s;
+    margin-left: 10px;
+    font-family: OCR-A;
+    letter-spacing: -3px;
+}
+
+.add-post-btn a:hover span{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.75s;
+}
