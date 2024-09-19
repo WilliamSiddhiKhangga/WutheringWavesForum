@@ -261,3 +261,33 @@ header {
 .login-register p a:hover {
     text-decoration: underline;
 }
+
+.tab-section character{
+    background: url('Media\1363479.png');
+    z-index: 3;
+    width: 100px;
+    color: hsl(10, 83%, 42%);
+    z-index: 2;
+    margin-left: 10px;
+    border-color: hsl(10, 83%, 42%);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+  
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
