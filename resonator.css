@@ -12,7 +12,6 @@ h1{
 .character-section{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    border: 1px solid white;
     width: 100%;
     height: 100%;
     gap: 20px;
@@ -29,7 +28,6 @@ h1{
     margin-left: 250px;
     margin-top: 170px;
     margin-bottom: 10px;
-    height: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -37,6 +35,7 @@ h1{
 .character-img figure{
     flex-basis: auto;
     text-align: center;
+    cursor: pointer;
 }
 
 .character-img a{
@@ -50,8 +49,10 @@ h1{
 }
 
 .b5 img{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgb(208, 181, 29);
+    background-image: linear-gradient(to top, white, rgb(255, 242, 0), rgb(255, 208, 0));
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .b5 figcaption{
@@ -59,12 +60,13 @@ h1{
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
-    width: 100%;
+    width: 94.8%;
     text-align: center;
+    margin-left: 5px;
 }
 
 .b5:hover figcaption{
-    bottom: 2px;
+    bottom: 7px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -77,8 +79,10 @@ h1{
 }
 
 .b4 img{
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgb(124, 6, 171);
+    background-image: linear-gradient(to top, rgb(244, 233, 250), rgb(181, 2, 181), rgb(113, 1, 144));
+    border: 5px solid rgb(0, 0, 0);
 }
 
 .b4 figcaption{
@@ -86,12 +90,13 @@ h1{
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
-    width: 100%;
+    width: 94.8%;
     text-align: center;
+    margin-left: 5px;
 }
 
 .b4:hover figcaption{
-    bottom: 2px;
+    bottom: 7px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
