@@ -47,7 +47,5 @@
 
 .content-container {
     margin-left: 170px;
-    overflow: hidden;
-    display: block;
-    width: 100;
+    /* overflow: hidden; */
 }
