@@ -13,7 +13,7 @@ body {
     background-color: #162938;
     background: url('Images/background-2.jpg') no-repeat fixed;
     background-size: cover;
-    background-position: 0% -10% 10% 50%;
+    background-position: 100% 0%;
     overflow: scroll;
 }
 
@@ -288,7 +288,8 @@ header {
 }
 
 #News h2 {
-    margin-top: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;  /* Pusatkan teks secara horizontal */
     overflow-y: auto; /* Enable scrolling for the entire tab content */
     font-size: 28px;     /* Ukuran font untuk judul */
