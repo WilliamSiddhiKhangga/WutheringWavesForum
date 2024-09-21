@@ -21,7 +21,7 @@
 }
 .nav-bar li {
     display: flex;
-    width: 170px;
+    width: 140px;
     height: 500px;
     border-radius: 10px;
     margin: 10px 0;
@@ -40,6 +40,7 @@
     align-items: end;
     justify-content: center;
     font-family: OCR-A;
+    letter-spacing: -3px;
 }
 
 .content-container {

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="forumStyles.css">
     <link rel="stylesheet" href="/navbarStyles.css">
 </head>
+</head>
 <body onload="highlightNavbar('/forum.html', 'forum'); closePostForm();">
     <script src="forumScripts.js"></script>
     <script src="/navbarScripts.js"></script>
@@ -17,7 +18,7 @@
             <li id="resonators"><a href="/resonators.html">Resonators</a></li>
             <li id="weapons"><a href="/weapons.html">Weapons</a></li>
             <li id="echoes"><a href="/echoes.html">Echoes</a></li>
-            <li id="forum"><a href="/forum.html">Forum</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html">Forum</a></li>
         </ul>
     </nav>
 
@@ -27,9 +28,34 @@
         </div>
     
         <!-- Add Post Form -->
-         <div class="add-post-popup" id="post-form">
-            <h1>This is form</h1>
-         </div>
+        <div class="add-post-popup" id="post-form">
+            <span class="icon-close" onclick="closePostForm()">
+                <a style="font-family: Arial, Helvetica, sans-serif;">X</a>
+            </span>
+
+            <div class="post-popup-header">
+                <h2>Add Post</h2>
+            </div>
+
+            <div class="add-post-form">  
+                <form action="#">
+                    <div class="input-title input-label">
+                        <label>Title</label>
+                        <input type="text" name="title" placeholder="Post Title" required>
+                    </div>
+                    
+                    <div class="input-desc input-label">
+                        <label>Description</label>
+                        <br><br>
+                        <textarea placeholder="Description"></textarea>
+                    </div>
+
+                    <div class="post-btn-container">
+                        <input class="post-btn" type="submit" value="Post">
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
