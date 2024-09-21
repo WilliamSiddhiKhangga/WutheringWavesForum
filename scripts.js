@@ -3,8 +3,8 @@ const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
+const audio = document.getElementById('background-music');
 
-// Function to handle login state
 function handleLoginState() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
@@ -14,7 +14,7 @@ function handleLoginState() {
         } else if (window.location.pathname.includes('main.html')) {
             if (btnPopup) {
                 btnPopup.textContent = 'Logout';
-                btnPopup.removeEventListener('click', openPopup);
+                btnPopup.removeEventListener('click', redirectToLogin);
                 btnPopup.addEventListener('click', handleLogout);
             }
         }
@@ -27,37 +27,125 @@ function handleLoginState() {
     }
 }
 
-// Function to handle successful login
 function handleLoginSuccess() {
     localStorage.setItem('isLoggedIn', 'true');
     window.location.href = 'main.html';
 }
 
-// Function to handle logout
 function handleLogout() {
     localStorage.removeItem('isLoggedIn');
-    window.location.href = 'index.html';
+    localStorage.setItem('currentTab', 'News'); // Set tab 'News' sebagai landing page
+    // Tidak perlu mengarahkan ke index.html, biarkan di main.html
+    handleLoginState(); // Update tampilan button
 }
 
-// Function to open popup
+
 function openPopup() {
     wrapper.classList.add('active-popup');
 }
 
-// Function to close popup
 function closePopup() {
     wrapper.classList.remove('active-popup');
 }
 
-// Function to redirect to index.html with login form open
 function redirectToLogin() {
     window.location.href = 'index.html?openLogin=true';
 }
 
-// Event listeners for login and registration
+function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(tabId).style.display = 'block';
+}
+
+function handleTabNavigation() {
+    const currentTab = localStorage.getItem('currentTab') || 'home';
+
+    showTab(currentTab);
+
+    document.querySelectorAll('.navigation a').forEach(tabLink => {
+        tabLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetTab = this.getAttribute('data-tab');
+            showTab(targetTab);
+            localStorage.setItem('currentTab', targetTab);
+        });
+    });
+}
+
+function initNewsSlider() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.news-slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        if (index >= totalSlides) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = index;
+        }
+        const offset = -currentSlide * 100;
+        document.querySelector('.slider-container').style.transform = `translateX(${offset}%)`;
+    }
+
+    function moveSlide(n) {
+        showSlide(currentSlide + n);
+    }
+
+    // Initialize first slide
+    showSlide(currentSlide);
+
+    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
+    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+}
+
+function handleScrollEffects() {
+    let prevScrollPos = window.pageYOffset;
+    const header = document.querySelector("header");
+
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+        header.style.top = prevScrollPos > currentScrollPos ? "0" : "-100px";
+        prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        const background = document.querySelector('.background-image');
+        if (background) {
+            background.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const openLogin = params.get('openLogin') === 'true';
+    handleLoginState();
+
+    if (window.location.pathname.includes('index.html')) {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('openLogin') === 'true') {
+            openPopup();
+            const newURL = window.location.href.split('?')[0];
+            window.history.replaceState({}, document.title, newURL);
+        }
+    }
+
+    if (window.location.pathname.includes('main.html')) {
+        handleTabNavigation();
+        initNewsSlider();
+    }
+
+    if (audio) {
+        document.addEventListener('click', () => {
+            if (audio.muted) {
+                audio.muted = false;
+                audio.play();
+            }
+        });
+    }
 
     if (btnPopup) {
         btnPopup.addEventListener('click', () => {
@@ -65,21 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isLoggedIn) {
                 handleLogout();
             } else {
-                redirectToLogin(); // Use redirectToLogin function to navigate to index.html
+                redirectToLogin();
             }
         });
     }
 
     if (registerLink) {
-        registerLink.addEventListener('click', () => {
-            wrapper.classList.add('active');
-        });
+        registerLink.addEventListener('click', () => wrapper.classList.add('active'));
     }
-    
+
     if (loginLink) {
-        loginLink.addEventListener('click', () => {
-            wrapper.classList.remove('active');
-        });
+        loginLink.addEventListener('click', () => wrapper.classList.remove('active'));
     }
 
     if (iconClose) {
@@ -94,56 +178,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Show login popup if the URL parameter indicates so
-    if (window.location.pathname.includes('index.html') && openLogin) {
-        openPopup();
-        // Remove the parameter from the URL to prevent reopening the popup on reload
-        const newURL = window.location.href.split('?')[0];
-        window.history.replaceState({}, document.title, newURL);
-    }
-
-    if (window.location.pathname.includes('main.html')) {
-        handleTabNavigation();
-    }
-
-    const audio = document.getElementById('background-music');
-    if (audio) {
-        document.addEventListener('click', () => {
-            if (audio.muted) {
-                audio.muted = false;
-                audio.play();
-            }
-        });
-    }
-
-    handleLoginState();
+    handleScrollEffects();
 });
-
-// Handle tab navigation on main.html
-function handleTabNavigation() {
-    const currentTab = localStorage.getItem('currentTab') || 'home';
-    
-    document.querySelectorAll('.tab-content').forEach(section => {
-        section.style.display = 'none';
-    });
-
-    const activeSection = document.getElementById(currentTab);
-    if (activeSection) {
-        activeSection.style.display = 'block';
-    }
-
-    document.querySelectorAll('.navigation a').forEach(tabLink => {
-        tabLink.addEventListener('click', function(event) {
-            event.preventDefault();
-            const targetTab = this.getAttribute('data-tab');
-
-            document.querySelectorAll('.tab-content').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            document.getElementById(targetTab).style.display = 'block';
-
-            localStorage.setItem('currentTab', targetTab);
-        });
-    });
-}

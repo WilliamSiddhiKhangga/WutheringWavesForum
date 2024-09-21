@@ -6,10 +6,11 @@
     <title>Forum Wuthering Waves</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbarStyles.css">
+    <link rel="stylesheet" href="navbarStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body onload="highlightNavbar('/index.html', 'home')">
+<body class="body-home" onload="highlightNavbar('/index.html', 'home')">
     <!-- <audio id="background-music" autoplay loop muted>
         <source src="Audio/wuwa.mp3" type="audio/mpeg">
     </audio> -->
@@ -18,22 +19,20 @@
 
     <nav class="nav-bar">
         <ul>
-            <li id="home"><a href="/main.html"><img src="Images/home-icon.png"></a><a href="/main.html">Home</a></li>
-            <li id="resonators"><a href="/resonators.html">Resonators</a></li>
-            <li id="weapons"><a href="/weapons.html">Weapons</a></li>
-            <li id="echoes"><a href="/echoes.html">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html">Forum</a></li>
+            <li id="home"><a href="main.html?tab=News"><img src="Images/home-icon.png">Home</a></li>
+            <li id="resonators"><a href="/resonators.html"><img src="Images/home-icon.png">Resonators</a></li>
+            <li id="weapons"><a href="/weapons.html"><img src="Images/home-icon.png">Weapons</a></li>
+            <li id="echoes"><a href="/echoes.html"><img src="Images/home-icon.png">Echoes</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><img src="Images/home-icon.png">Forum</a></li>
         </ul>
     </nav>
 
     <div class="content-container">
-        <img class="background-image" src="Images/background.jpg">
         <header>
             <nav class="navigation">
-                <a href="main.html?tab=home">Home</a>
-                <a href="main.html?tab=about">About</a>
-                <a href="main.html?tab=services">Services</a>
-                <a href="main.html?tab=contact">Contact</a>
+                <!-- <a href="main.html?tab=about">About</a>
+                <a href="main.html?tab=News">News</a>
+                <a href="main.html?tab=contact">Contact</a> -->
                 <button class="btnLogin-popup">Login</button>
             </nav>        
         </header>

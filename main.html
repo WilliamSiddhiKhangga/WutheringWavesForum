@@ -6,8 +6,9 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbarStyles.css">
+    <link rel="stylesheet" href="navbarStyles.css">
 </head>
-<body onload="highlightNavbar('/main.html', 'home')">
+<body class="body-home" onload="showTab('News')">
     <script src="navbarScripts.js"></script>
 
     <!-- <audio id="background-music" autoplay loop muted>
@@ -16,21 +17,19 @@
 
     <nav class="nav-bar">
         <ul>
-            <li id="home"><a href="/main.html"><img src="Images/home-icon.png"></a><a href="/main.html">Home</a></li>
-            <li id="resonators"><a href="/resonators.html">Resonators</a></li>
-            <li id="weapons"><a href="/weapons.html">Weapons</a></li>
-            <li id="echoes"><a href="/echoes.html">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html">Forum</a></li>
+            <li id="home"><a href="#" onclick="showTab('News')"><img src="Images/home-icon.png">Home</a></li>
+            <li id="resonators"><a href="/resonators.html"><img src="Images/home-icon.png">Resonators</a></li>
+            <li id="weapons"><a href="/weapons.html"><img src="Images/home-icon.png">Weapons</a></li>
+            <li id="echoes"><a href="/echoes.html"><img src="Images/home-icon.png">Echoes</a></li>
+            <li id="forum"><a href="Code/Forum/forum.html"><img src="Images/home-icon.png">Forum</a></li>
         </ul>
     </nav>
     
     <div class="content-container">
-        <img class="background-image" src="Images/background.jpg">
         <header>
             <nav class="navigation">
-                <a href="#" data-tab="home">Home</a>
+                <a href="#" data-tab="News">News</a>
                 <a href="#" data-tab="about">About</a>
-                <a href="#" data-tab="services">Services</a>
                 <a href="#" data-tab="contact">Contact</a>
                 <button class="btnLogin-popup" id="loginBtn">Login</button>
             </nav>
@@ -42,22 +41,48 @@
             <p>Welcome to the home page content.</p>
         </section>
     
+        <section id="News" class="tab-content" style="display:none;">
+            <h2>News</h2>
+            <div class="news-slider-wrapper">
+                <div class="news-slider">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slider-container">
+                        <div class="news-slide">
+                            <div class="news-slide-content">
+                                <img src="Images/background.jpg" alt="News 1">
+                                <h3 class="headline">Headline News 1</h3>
+                            </div>
+                        </div>
+                        <div class="news-slide">
+                            <div class="news-slide-content">
+                                <img src="Images/background.jpg" alt="News 2">
+                                <h3 class="headline">Headline News 2</h3>
+                            </div>
+                        </div>
+                        <div class="news-slide">
+                            <div class="news-slide-content">
+                                <img src="Images/background.jpg" alt="News 3">
+                                <h3 class="headline">Headline News 3</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>              
+        
         <section id="about" class="tab-content" style="display:none;">
             <h2>About Us</h2>
             <p>Learn more about us here.</p>
         </section>
-    
-        <section id="services" class="tab-content" style="display:none;">
-            <h2>Our Services</h2>
-            <p>Details about services we offer.</p>
-        </section>
-    
+
         <section id="contact" class="tab-content" style="display:none;">
             <h2>Contact Us</h2>
             <p>Get in touch through our contact page.</p>
         </section>
     </div>
 
+    <script src="scripts.js"></script>  
     <script src="scripts.js"></script>  
 </body>
 </html>
