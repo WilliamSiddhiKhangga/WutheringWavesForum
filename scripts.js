@@ -78,6 +78,8 @@ function initNewsSlider() {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.news-slide');
     const totalSlides = slides.length;
+    const slideInterval = 3000; // Change slide every 3 seconds
+    let autoSlide;
 
     function showSlide(index) {
         if (index >= totalSlides) {
@@ -98,8 +100,33 @@ function initNewsSlider() {
     // Initialize first slide
     showSlide(currentSlide);
 
-    document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
-    document.querySelector('.next').addEventListener('click', () => moveSlide(1));
+// Initialize first slide
+showSlide(currentSlide);
+
+document.querySelector('.prev').addEventListener('click', () => {
+    moveSlide(-1);
+    resetAutoSlide();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    moveSlide(1);
+    resetAutoSlide();
+});
+
+// Start automatic slide change
+function startAutoSlide() {
+    autoSlide = setInterval(() => {
+        moveSlide(1);
+    }, slideInterval);
+}
+
+// Reset automatic slide on user interaction
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+}
+
+startAutoSlide(); // Begin auto sliding
 }
 
 function handleScrollEffects() {

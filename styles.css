@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     overscroll-behavior: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 
 body{
     display: flex;
     min-height: 200vh;
+    height: auto;
     background-color: #1f405a;
     background-size: cover;
     background-position: 100% 0%;
@@ -17,7 +19,7 @@ body{
 
 .body-home{
     display: flex;
-    min-height: 100vh;
+    min-height: 200vh;
     background-color: #162938;
     background: url('Images/background-2.jpg') no-repeat fixed;
     background-size: cover;
@@ -25,20 +27,23 @@ body{
     overflow: scroll;
 }
 
+
 body::-webkit-scrollbar {
     display: none; /* Menyembunyikan scrollbar */
 }
 
+/* Mengatur background-image agar memenuhi seluruh layar */
 .content-container {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 100vh;
     overflow: hidden;
-    bottom: 10px;
 }
 
+
+/* Header akan disembunyikan saat scroll */
 header {
+    /* position: absolute; */
     top: 0;
     right: 0;
     width: 100%;
@@ -47,7 +52,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
-    transition: top 0.3s;
+    transition: top 0.3s; /* Animasi untuk sembunyi/muncul */
 }
 
 .logo {
@@ -63,6 +68,7 @@ header {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    font-weight: 500;
     margin-left: 40px;
 }
 
@@ -95,6 +101,7 @@ header {
     cursor: pointer;
     font-size: 1.1em;
     color: #fff;
+    font-weight: 500;
     margin-left: 40px;
     transition: .5s;
 }
@@ -105,12 +112,12 @@ header {
 }
 
 .navigation .btnLogin-popup.logout {
-    background: #d9534f;
+    background: #d9534f; /* Example background color for logout */
     color: #fff;
-    border-color: #d9534f;
+    border-color: #d9534f; /* Example border color for logout */
 }
 
-.wrapper {
+.wrapper{
     position: fixed;
     top: 20%;
     left: 40%;
@@ -129,8 +136,8 @@ header {
     transition: transform .5s ease, height .2s ease;
 }
 
-.wrapper.active-popup {
-    transform: scale(1);
+.wrapper.active-popup{
+    transform: scale(1); 
 }
 
 .wrapper.active {
@@ -139,7 +146,7 @@ header {
 
 .wrapper .form-box {
     width: 100%;
-    padding: 40px;
+    padding: 40px;   
 }
 
 .wrapper .form-box.login {
@@ -200,6 +207,7 @@ header {
     left: 5px;
     transform: translateY(-50%);
     font-size: 1em;
+    /* color: #162938; */
     color: hsl(0, 0%, 96%);
     font-weight: 500;
     pointer-events: none;
@@ -233,6 +241,7 @@ header {
 
 .remember-forgot {
     font-size: .9em;
+    /* color: #162938; */
     color: hsl(0, 0%, 96%);
     font-weight: 500;
     margin: -15px 0 15px;
@@ -242,10 +251,11 @@ header {
 
 .remember-forgot label input {
     accent-color: #162938;
-    margin-right: 3px;
+    margin-right: 3px;  
 }
 
 .remember-forgot a {
+    /* color: #162938; */
     color: hsl(0, 0%, 96%);
     text-decoration: none;
 }
@@ -269,6 +279,7 @@ header {
 
 .login-register {
     font-size: .9em;
+    /* color: #162938; */
     color: hsl(0, 0%, 96%);
     text-align: center;
     font-weight: 500;
@@ -276,6 +287,7 @@ header {
 }
 
 .login-register p a {
+    /* color: #162938; */
     color: hsl(0, 0%, 96%);
     text-decoration: none;
     font-weight: 600;
@@ -287,29 +299,27 @@ header {
 
 #News h2 {
     margin-top: 10px;
-    margin-left: 20%;
-    text-align: center;
-    font-size: 28px;
-    width: 60%;
-    align-items: center;
-    background-color: green;
-    color: #333;
+    margin-bottom: 10px;
+    text-align: center;  /* Pusatkan teks secara horizontal */
+    overflow-y: auto; /* Enable scrolling for the entire tab content */
+    font-size: 28px;     /* Ukuran font untuk judul */
+    color: #333;         /* Warna teks (sesuaikan sesuai tema) */
 }
 
 .news-slider-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+    height: 100%; /* Isi tinggi kontainer */
+    overflow-y: auto; /* Menambahkan scrollbar vertikal jika diperlukan */
+    overflow-x: hidden; /* Menyembunyikan scrollbar horizontal */
 }
 
 .news-slider {
     position: relative;
-    width: 60%;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
+    width: 60%;             /* Atur lebar slider */
+    max-width: 1000px;       /* Maksimal lebar slider */
+    margin: 0 auto;          /* Pusatkan slider secara horizontal */
+    overflow: hidden;        /* Sembunyikan bagian yang keluar */
     display: flex;
     justify-content: center;
     bottom: 10px;
@@ -318,36 +328,36 @@ header {
 .slider-container {
     display: flex;
     transition: transform 0.4s ease-in-out;
-    width: 200%;
+    width: 100%;
 }
 
 .news-slide {
-    min-width: 100%;
-    box-sizing: border-box;
+    min-width: 100%;          /* Setiap slide mengambil 100% lebar slider */
+    box-sizing: border-box;    /* Menghitung padding dan border dalam ukuran */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;    /* Urutkan elemen vertikal (gambar di atas, headline di bawah) */
+    justify-content: center;   /* Pusatkan konten secara vertikal */
+    align-items: center;       /* Pusatkan konten secara horizontal */
     position: relative;
     box-sizing: border-box;
 }
 
 .news-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%;             /* Gambar memenuhi lebar kontainer slide */
+    height: auto;            /* Sesuaikan tinggi secara proporsional */
+    display: block;          /* Hapus jarak di bawah gambar */
 }
 
 .headline {
-    position: absolute;
-    bottom: 0;
+    position: absolute;      /* Overlay headline di atas gambar */
+    bottom: 0;               /* Letakkan headline di bagian bawah gambar */
     left: 0;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
+    width: 100%;             /* Lebar headline sesuai lebar gambar */
+    text-align: center;      /* Pusatkan teks headline */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang gelap transparan */
+    color: #fff;             /* Warna teks putih */
+    padding: 10px;          /* Padding untuk headline */
+    box-sizing: border-box;  /* Pastikan padding dihitung dalam ukuran */
 }
 
 button.prev, button.next {
@@ -355,8 +365,8 @@ button.prev, button.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 30px;
-    padding: 15px;
+    font-size: 30px;  /* Perbesar tombol panah */
+    padding: 15px;    /* Perbesar tombol untuk lebih mudah di klik */
     background-color: rgba(0,0,0,0.5);
     color: white;
     border: none;
@@ -372,7 +382,6 @@ button.next {
     right: 10px;
 }
 
-/* Event Banner Section */
 .current-banner-title {
     text-align: center; /* Center the text */
     font-size: 28px; /* Set font size */
@@ -411,4 +420,3 @@ button.next {
     color: #fff;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
-
