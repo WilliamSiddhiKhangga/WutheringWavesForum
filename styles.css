@@ -6,7 +6,16 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body {
+body{
+    display: flex;
+    min-height: 200vh;
+    background-color: #1f405a;
+    background-size: cover;
+    background-position: 100% 0%;
+    overflow: scroll;
+}
+
+.body-home{
     display: flex;
     min-height: 100vh;
     background-color: #162938;
