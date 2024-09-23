@@ -1,0 +1,97 @@
+/*  Resonator Details  */
+body{
+    background-color: #131618;
+    position: absolute;
+}
+
+button{
+    position: absolute;
+    background-color: blueviolet;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.character-photo{
+    position: absolute;
+    margin-left: 780px;
+    margin-top: 10px;
+    width: 700px;
+    display: flex;
+    align-content: end;
+    /* border: 1px solid white; */
+    object-fit: contain;
+    overflow: hidden;
+    /* background-image: ; */
+}
+
+.character-details-fusion{
+    /* border: 1px solid white; */
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(186, 56, 0);
+    border-radius: 10px;
+}
+
+.character-details-electro{
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(171, 29, 248);
+    border-radius: 10px;
+}
+
+.character-details-spectro{
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(159, 167, 10);
+    border-radius: 10px;
+}
+
+.character-details-glacio{
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(45, 190, 247);
+    border-radius: 10px;
+}
+
+.character-details-aero{
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(58, 227, 182);
+    border-radius: 10px;
+}
+
+.character-details-havoc{
+    height: 600px;
+    width: 700px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: rgb(147, 10, 103);
+    border-radius: 10px;
+}
+
+.details h1{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.details pre{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    border-top: 3px solid grey;
+    border-bottom: 3px solid grey;
+}
