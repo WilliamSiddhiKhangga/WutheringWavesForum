@@ -6,6 +6,7 @@
     <title>Forum</title>
     <link rel="stylesheet" href="forumStyles.css">
     <link rel="stylesheet" href="/navbarStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 </head>
 <body onload="highlightNavbar('/forum.html', 'forum'); closePostForm();">
@@ -14,11 +15,11 @@
 
     <nav class="nav-bar">
         <ul>
-            <li id="home"><a href="/main.html"><img src="/Images/home-icon.png"></a><a href="/main.html">Home</a></li>
-            <li id="resonators"><a href="/resonators.html">Resonators</a></li>
-            <li id="weapons"><a href="/weapons.html">Weapons</a></li>
-            <li id="echoes"><a href="/echoes.html">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html">Forum</a></li>
+            <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+            <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/home-icon.png">Resonators</a></li>
+            <li id="weapons"><a href="/weapons.html"><img src="/Images/Navbar-Icons/home-icon.png">Weapons</a></li>
+            <li id="echoes"><a href="/echoes.html"><img src="/Images/Navbar-Icons/home-icon.png">Echoes</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/home-icon.png">Forum</a></li>
         </ul>
     </nav>
 
@@ -41,13 +42,13 @@
                 <form action="#">
                     <div class="input-title input-label">
                         <label>Title</label>
-                        <input type="text" name="title" placeholder="Post Title" required>
+                        <input type="text" name="title" placeholder="Post Title" maxlength="200" required>
                     </div>
                     
                     <div class="input-desc input-label">
                         <label>Description</label>
                         <br><br>
-                        <textarea placeholder="Description"></textarea>
+                        <textarea placeholder="Post Description"></textarea>
                     </div>
 
                     <div class="post-btn-container">
@@ -56,6 +57,158 @@
                 </form>
             </div>
         </div>
+
+        <section class="show-posts">
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>ayamterbang096</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>Opinion on Xiangli Yao?</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I honestly bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>121</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>14</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>23</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+            
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>bebekhangat003</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>I Find the BEST build for Jinshi</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I found that bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>14</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>8</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>5</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>cicakkingzzz</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>New funny bug found</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I recently bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>2070</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>1718</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>1</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>dombambe088</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>My new fav character, changli</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I tried bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>50</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>2</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>11</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>rawrfreedom070</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>Open Commission</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I decided bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>80</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>12</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>13</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+
+            <span class="show-individual-posts">
+                <div class="show-profile-on-post">
+                    <img src="/Images/default-profile.png">
+                    <h4>akurajaiblis</h4>
+                </div>
+
+                <div class="show-post-title" id="posts-title">
+                    <h2>Aku emo dan aku bangga</h2> 
+                </div>
+                
+                <div class="show-post-description" id="posts-desc">
+                    <h3>I bla bla bla bla bla bla bla bla bla, 
+                        but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
+                </div>
+
+                <div class="like-dislike">
+                    <h3>7</h3>
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <h3>213</h3>
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <h3>33</h3>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+            </span>
+        </section>
     </div>
 </body>
 </html>

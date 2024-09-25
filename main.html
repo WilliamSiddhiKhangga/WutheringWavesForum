@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="navbarStyles.css">
     <link rel="stylesheet" href="navbarStyles.css">
 </head>
-<body class="body-home" onload="showTab('News')">
+<body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home')">
     <script src="navbarScripts.js"></script>
 
     <!-- <audio id="background-music" autoplay loop muted>
@@ -17,11 +17,11 @@
 
     <nav class="nav-bar">
         <ul>
-            <li id="home"><a href="#" onclick="showTab('News')"><img src="Images/home-icon.png">Home</a></li>
-            <li id="resonators"><a href="/resonators.html"><img src="Images/home-icon.png">Resonators</a></li>
-            <li id="weapons"><a href="/weapons.html"><img src="Images/home-icon.png">Weapons</a></li>
-            <li id="echoes"><a href="/echoes.html"><img src="Images/home-icon.png">Echoes</a></li>
-            <li id="forum"><a href="Code/Forum/forum.html"><img src="Images/home-icon.png">Forum</a></li>
+            <li id="home"><a href="#" onclick="showTab('News')"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+            <li id="resonators"><a href="Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/home-icon.png">Resonators</a></li>
+            <li id="weapons"><a href="/weapons.html"><img src="/Images/Navbar-Icons/home-icon.png">Weapons</a></li>
+            <li id="echoes"><a href="/echoes.html"><img src="/Images/Navbar-Icons/home-icon.png">Echoes</a></li>
+            <li id="forum"><a href="Code/Forum/forum.html"><img src="/Images/Navbar-Icons/home-icon.png">Forum</a></li>
         </ul>
     </nav>
     
@@ -82,7 +82,6 @@
         </section>
     </div>
 
-    <script src="scripts.js"></script>  
     <script src="scripts.js"></script>  
 </body>
 </html>
