@@ -3,6 +3,11 @@
     src: url(Fonts/ocraextended.ttf);
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .nav-bar ul {
     list-style: none;
     position: fixed;
@@ -29,7 +34,7 @@
     margin: 10px 0;
 }
 .nav-bar li:hover {
-    background-color: rgb(49, 91, 117);
+    background-color: rgb(31, 62, 87);
 }
 .nav-bar a {
     color: white;
