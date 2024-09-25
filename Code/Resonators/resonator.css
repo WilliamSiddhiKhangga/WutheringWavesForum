@@ -1,3 +1,4 @@
+/*  Resonator Archive  */
 h1{
     margin-left: 200px;
     margin-top: 100px;
@@ -51,7 +52,7 @@ h1{
 .b5 img{
     border-radius: 10px;
     background-color: rgb(208, 181, 29);
-    background-image: linear-gradient(to top, white, rgb(255, 242, 0), rgb(255, 208, 0));
+    background-image: linear-gradient(to top, white, rgb(255, 242, 0), rgb(255, 187, 0));
     border: 5px solid rgb(0, 0, 0);
 }
 
