@@ -46,7 +46,9 @@ function openPopup() {
 
 function closePopup() {
     wrapper.classList.remove('active-popup');
+    window.location.href = 'main.html'; // Redirect to main.html
 }
+
 
 function redirectToLogin() {
     window.location.href = 'index.html?openLogin=true';
