@@ -11,7 +11,7 @@ body{
     display: flex;
     min-height: 200vh;
     height: auto;
-    background-color: #1f405a;
+    background-color: rgb(26, 36, 45);
     background-size: cover;
     background-position: 100% 0%;
     overflow: scroll;
