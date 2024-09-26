@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="resonator.css" />
         <link rel="stylesheet" href="navbarStyles.css" />
         <link rel="stylesheet" href="styles.css" />
+        <script src="filter.js" defer></script>
     </head>
     <nav class="nav-bar">
         <ul>
@@ -17,87 +18,101 @@
     </nav>
 
     <body>
-        <div class="containers">
             <h1>Resonators Archive</h1>
+
+            <br>
+
             <div class="character-section">
                 <div class="character-img">
-                    <figure class="b5">
-                        <a href="/ResonatorHTML/Xiangli_Yao.html">
-                        <img width="180px" src="Images\Resonators\Xiangli Yao-removebg-preview.png" alt="Xiangli Yao">
-                        <figcaption>Xiangli Yao</figcaption>
-                        </a>
-                    </figure>
+                    <div class="element_category">
+                        <button class="active" data-name="all">Show all</button>
+                        <button data-name="fusion">Fusion</button>
+                        <button data-name="electro">Electro</button>
+                        <button data-name="aero">Aero</button>
+                        <button data-name="spectro">Spectro</button>
+                        <button data-name="havoc">Havoc</button>
+                        <button data-name="glacio">Glacio</button>
+                    </div>
 
-                    <br>
+                    <div class="filterable">
+                        <div class="character" data-name="electro">
+                            <figure class="b5">
+                                <a href="/ResonatorHTML/Xiangli_Yao.html">
+                                <img width="180px" src="Images\Resonators\Xiangli Yao-removebg-preview.png" alt="Xiangli Yao">
+                                <figcaption>Xiangli Yao</figcaption>
+                                </a>
+                            </figure>
+                        </div>
 
-                    <figure class="b5">
-                        <a href="/ResonatorHTML/Changli.html">
-                        <img width=180px src="Images\Resonators\Changli-removebg-preview.png" alt="Changli">
-                        <figcaption>Changli</figcaption>
-                        </a>
-                    </figure>
-                    
-                    <br>
-                    
-                    <figure class="b5">
-                        <a href="/ResonatorHTML/Jinshi.html">
-                        <img width="180px" src="Images\Resonators\Jinshi-removebg-preview.png" alt="Jinshi">
-                        <figcaption>Jinshi</figcaption>
-                        </a>
-                    </figure>
 
-                    <br>
+                        <div class="character" data-name="fusion">
+                            <figure class="b5">
+                                <a href="/ResonatorHTML/Changli.html">
+                                <img width=180px src="Images\Resonators\Changli-removebg-preview.png" alt="Changli">
+                                <figcaption>Changli</figcaption>
+                                </a>
+                            </figure>
+                        </div>
 
-                    <figure class="b4">
-                        <img width="180px" src="Images\Resonators\Yuanwu-removebg-preview.png" alt="Yuan Wu">
-                        <figcaption>Yuan Wu</figcaption>
-                    </figure>
-                
-                    <br>
+                        <div class="character" data-name="spectro">
+                            <figure class="b5">
+                                <a href="/ResonatorHTML/Jinshi.html">
+                                <img width="180px" src="Images\Resonators\Jinshi-removebg-preview.png" alt="Jinshi">
+                                <figcaption>Jinshi</figcaption>
+                                </a>
+                            </figure>
+                        </div>
 
-                    <figure class="b5">
-                        <img class="b5" src="Images\Resonators\Yinlin-removebg-preview.png" alt="Yinlin">
-                        <figcaption>Yinlin</figcaption>
-                    </figure>
-                
-                    <br>
+                        <div class="character" data-name="electro">
+                            <figure class="b4">
+                                <img width="180px" src="Images\Resonators\Yuanwu-removebg-preview.png" alt="Yuan Wu">
+                                <figcaption>Yuan Wu</figcaption>
+                            </figure>
+                        </div>
 
-                    <figure class="b5">
-                        <img width="180px" src="Images\Resonators\MaleRover-removebg-preview.png" alt="Male Rover">
-                        <figcaption>Male Rover</figcaption>
-                    </figure>
-                
-                    <br>
+                        <div class="character" data-name="electro">
+                            <figure class="b5">
+                                <img class="b5" src="Images\Resonators\Yinlin-removebg-preview.png" alt="Yinlin">
+                                <figcaption>Yinlin</figcaption>
+                            </figure>
+                        </div>
 
-                    <figure class="b5">
-                        <img width="180px" src="Images\Resonators\Jiyan-removebg-preview.png" alt="Jiyan">
-                        <figcaption>Jiyan</figcaption>
-                    </figure>
-                
-                    <br>
+                        <div class="character" data-name="spectro">
+                            <figure class="b5">
+                                <img width="180px" src="Images\Resonators\MaleRover-removebg-preview.png" alt="Male Rover">
+                                <figcaption>Male Rover</figcaption>
+                            </figure>
+                        </div>
 
-                    <figure class="b5">
-                        <img width="180px" src="Images\Resonators\Chalcaro-removebg-preview.png" alt="Chalcaro">
-                        <figcaption>Calcharo</figcaption>
-                    </figure>
+                        <div class="character" data-name="aero">
+                            <figure class="b5">
+                                <img width="180px" src="Images\Resonators\Jiyan-removebg-preview.png" alt="Jiyan">
+                                <figcaption>Jiyan</figcaption>
+                            </figure>
+                        </div>
 
-                    <br>
+                        <div class="character" data-name="electro">
+                            <figure class="b5">
+                                <img width="180px" src="Images\Resonators\Chalcaro-removebg-preview.png" alt="Chalcaro">
+                                <figcaption>Calcharo</figcaption>
+                            </figure>
+                        </div>
 
-                    <figure class="b4">
-                        <img width="180px" src="Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
-                        <figcaption>Baizhi</figcaption>
-                    </figure>
+                        <div class="character" data-name="glacio">
+                            <figure class="b4">
+                                <img width="180px" src="Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
+                                <figcaption>Baizhi</figcaption>
+                            </figure>
+                        </div>
 
-                    <br>
-                    
-                    <figure class="b4">
-                        <img width="180px" src="Images\Resonators\Mortefi-removebg-preview.png" alt="Mortefi">
-                        <figcaption>Mortefi</figcaption>
-                    </figure>
-
-                    <br>
+                        <div class="character" data-name="fusion">
+                            <figure class="b4">
+                                <img width="180px" src="Images\Resonators\Mortefi-removebg-preview.png" alt="Mortefi">
+                                <figcaption>Mortefi</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </body>
 </html>

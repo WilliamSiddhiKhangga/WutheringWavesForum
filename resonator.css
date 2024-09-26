@@ -6,10 +6,47 @@ h1{
     color: rgb(221, 220, 220);
 }
 
+.element-category{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    align-items: center;
+    max-width: 1250px;
+    width: 100%;
+    padding: 20 20 20 0/px;
+    gap: 10px;
+}
+
+button{
+    padding: 10px 20px;
+    background: rgb(219, 217, 217);
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgb(255, 255, 255);
+}
+
+button.active{
+    background: rgb(8, 163, 253);
+}
+
+button.active:hover{
+    background: rgb(128, 208, 255);
+}
+
+.character.hide{
+    display: none;
+}
+
 .containers{
     display: flex;
 }
 
+/* Character Section */
 .character-section{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -25,22 +62,30 @@ h1{
 .character-img{
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    margin-left: 250px;
+    gap: 30px;
+    margin-left: 200px;
     margin-top: 170px;
     margin-bottom: 10px;
-    object-fit: cover;
-    object-position: center;
 }
 
 .character-img figure{
-    flex-basis: auto;
+    flex-grow: 1;
+    flex-basis: 300px;
     text-align: center;
     cursor: pointer;
 }
 
 .character-img a{
     color: black;
+}
+
+.filterable{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    margin-bottom: 10px;
 }
 
 .b5{
@@ -61,13 +106,13 @@ h1{
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
-    width: 94.8%;
+    width: 94.5%;
     text-align: center;
     margin-left: 5px;
 }
 
 .b5:hover figcaption{
-    bottom: 7px;
+    bottom: 5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -97,7 +142,7 @@ h1{
 }
 
 .b4:hover figcaption{
-    bottom: 7px;
+    bottom: 5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
