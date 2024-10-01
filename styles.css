@@ -344,7 +344,7 @@ header {
 
 .news-slide img {
     width: 100%;             /* Gambar memenuhi lebar kontainer slide */
-    height: auto;            /* Sesuaikan tinggi secara proporsional */
+    height: 100%;            /* Sesuaikan tinggi secara proporsional */
     display: block;          /* Hapus jarak di bawah gambar */
 }
 
@@ -412,7 +412,7 @@ button.next {
 
 .event-banner-text {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2rem;
