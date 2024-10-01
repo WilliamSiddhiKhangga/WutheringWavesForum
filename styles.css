@@ -11,7 +11,7 @@ body{
     display: flex;
     min-height: 200vh;
     height: auto;
-    background-color: #1f405a;
+    background-color: rgb(26, 36, 45);
     background-size: cover;
     background-position: 100% 0%;
     overflow: scroll;
@@ -298,12 +298,14 @@ header {
 }
 
 #News h2 {
-    margin-top: 10px;
+    top: 10px;
+    position: relative;
     margin-bottom: 10px;
     text-align: center;  /* Pusatkan teks secara horizontal */
     overflow-y: auto; /* Enable scrolling for the entire tab content */
     font-size: 28px;     /* Ukuran font untuk judul */
-    color: #333;         /* Warna teks (sesuaikan sesuai tema) */
+    color: #ffffff;         /* Warna teks (sesuaikan sesuai tema) */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
 .news-slider-wrapper {
@@ -343,8 +345,9 @@ header {
 }
 
 .news-slide img {
-    width: 100%;             /* Gambar memenuhi lebar kontainer slide */
-    height: 100%;            /* Sesuaikan tinggi secara proporsional */
+    margin-top: 28px;
+    width: 100%;
+    height: auto;            /* Sesuaikan tinggi secara proporsional */
     display: block;          /* Hapus jarak di bawah gambar */
 }
 
@@ -386,7 +389,7 @@ button.next {
     text-align: center; /* Center the text */
     font-size: 28px; /* Set font size */
     color: #fff; /* Set text color */
-    margin: 20px 0; /* Add some vertical spacing */
+    margin: 80px 0px 0px 0px; /* Add some vertical spacing */
 }
 
 .event-banner-section {
@@ -417,6 +420,6 @@ button.next {
     transform: translate(-50%, -50%);
     font-size: 2rem;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
