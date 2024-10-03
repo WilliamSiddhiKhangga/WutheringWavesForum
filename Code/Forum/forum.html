@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/navbarStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-</head>
 <body onload="highlightNavbar('/forum.html', 'forum'); closePostForm();">
     <script src="forumScripts.js"></script>
     <script src="/navbarScripts.js"></script>
@@ -39,37 +38,38 @@
             </div>
 
             <div class="add-post-form">  
-                <form action="#">
+                <form id="post-form-inner" action="#">
                     <div class="input-title input-label">
                         <label>Title</label>
-                        <input type="text" name="title" placeholder="Post Title" maxlength="200" required>
+                        <input id="post-title-input" type="text" name="title" placeholder="Post Title" maxlength="200" required>
                     </div>
                     
                     <div class="input-desc input-label">
                         <label>Description</label>
                         <br><br>
-                        <textarea placeholder="Post Description"></textarea>
+                        <textarea id="post-desc-input" placeholder="Post Description"></textarea>
                     </div>
 
                     <div class="post-btn-container">
-                        <input class="post-btn" type="submit" value="Post">
+                        <input class="post-btn" type="submit" value="Post" onclick="closePostForm()">
                     </div>
                 </form>
             </div>
         </div>
 
-        <section class="show-posts">
-            <span class="show-individual-posts">
+        <!-- Show Posts -->
+        <ul class="show-posts" id="show-posts">
+            <li id="show-individual-posts" class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>ayamterbang096</h4>
                 </div>
 
-                <div class="show-post-title" id="posts-title">
+                <div class="show-post-title" id="show-post-title">
                     <h2>Opinion on Xiangli Yao?</h2> 
                 </div>
                 
-                <div class="show-post-description" id="posts-desc">
+                <div class="show-post-description" id="show-post-desc">
                     <h3>I honestly bla bla bla bla bla bla bla bla bla, 
                         but bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
                 </div>
@@ -82,9 +82,9 @@
                     <h3>23</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
-            
-            <span class="show-individual-posts">
+            </li>
+
+            <li class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>bebekhangat003</h4>
@@ -107,9 +107,9 @@
                     <h3>5</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
+            </li>
 
-            <span class="show-individual-posts">
+            <li class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>cicakkingzzz</h4>
@@ -132,9 +132,9 @@
                     <h3>1</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
+            </li>
 
-            <span class="show-individual-posts">
+            <li class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>dombambe088</h4>
@@ -157,9 +157,9 @@
                     <h3>11</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
+            </li>
 
-            <span class="show-individual-posts">
+            <li class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>rawrfreedom070</h4>
@@ -182,9 +182,9 @@
                     <h3>13</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
+            </li>
 
-            <span class="show-individual-posts">
+            <li class="show-individual-post">
                 <div class="show-profile-on-post">
                     <img src="/Images/Forum-Images/default-profile.png">
                     <h4>akurajaiblis</h4>
@@ -207,8 +207,8 @@
                     <h3>33</h3>
                     <i class="fa-solid fa-comment"></i>
                 </div>
-            </span>
-        </section>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
