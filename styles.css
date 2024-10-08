@@ -42,8 +42,8 @@ body::-webkit-scrollbar {
 
 
 /* Header akan disembunyikan saat scroll */
-header {
-    /* position: absolute; */
+/* header {
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
@@ -52,8 +52,8 @@ header {
     justify-content: flex-end;
     align-items: center;
     z-index: 1;
-    transition: top 0.3s; /* Animasi untuk sembunyi/muncul */
-}
+    transition: top 0.3s; /* Animasi untuk sembunyi/muncul 
+} */
 
 .logo {
     font-size: 2em;

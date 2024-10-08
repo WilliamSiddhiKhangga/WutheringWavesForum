@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const username = document.createElement('h4');
             username.textContent = defName;
 
-            
             const postTitleDiv = document.createElement('div');
             postTitleDiv.classList.add('show-post-title');
             postTitleDiv.innerHTML = `<h2>${showPostTitle}</h2>`;

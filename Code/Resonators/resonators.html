@@ -5,12 +5,27 @@
         <link rel="stylesheet" href="resonator.css" />
         <link rel="stylesheet" href="/navbarStyles.css" />
         <link rel="stylesheet" href="/styles.css"/>
+        <link rel="stylesheet" href="/headerFooterStyles.css">
         <script src="resonators.js" defer></script>
     </head>
 
     <body onload="highlightNavbar('/resonators.html', 'resonators')">
         <script src="/navbarScripts.js"></script>
-        <nav class="nav-bar">
+        <script src="/headerScripts.js"></script>
+        
+        <header>
+            <div class="header">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <h2 class="header-title">Wuthering Waves</h2>
+                <button class="login-btn" id="loginBtn">Login</button>
+            </div>
+        </header>
+
+        <nav class="nav-bar" id="nav-bar">
             <ul>
                 <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
                 <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/home-icon.png">Resonators</a></li>
@@ -20,7 +35,7 @@
             </ul>
         </nav>
 
-    <body>
+        <div class="content-container">
             <h1>Resonators Archive</h1>
 
             <br>
@@ -117,5 +132,6 @@
                     </div>
                 </div>
             </div>
+        </div>
     </body>
 </html>

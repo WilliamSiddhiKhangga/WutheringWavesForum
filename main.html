@@ -6,17 +6,31 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbarStyles.css">
+    <link rel="stylesheet" href="headerFooterStyles.css">
 </head>
 <body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home')">
     <script src="navbarScripts.js"></script>
+    <script src="headerScripts.js"></script>
 
     <!-- <audio id="background-music" autoplay loop muted>
         <source src="Audio/wuwa-main.mp3" type="audio/mpeg">
     </audio>   -->
 
-    <nav class="nav-bar">
+    <header>
+        <div class="header">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="header-title">Wuthering Waves</h2>
+            <button class="login-btn" id="loginBtn">Login</button>
+        </div>
+    </header>
+
+    <nav class="nav-bar" id="nav-bar">
         <ul>
-            <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+            <li id="home"><a href="/main.html"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
             <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/home-icon.png">Resonators</a></li>
             <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/home-icon.png">Weapons</a></li>
             <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/home-icon.png">Echoes</a></li>
@@ -25,14 +39,15 @@
     </nav>
     
     <div class="content-container">
-        <header>
+
+        <!-- <header>
             <nav class="navigation">
                 <a href="#" data-tab="News">News</a>
                 <a href="#" data-tab="about">About</a>
                 <a href="#" data-tab="contact">Contact</a>
                 <button class="btnLogin-popup" id="loginBtn">Login</button>
             </nav>
-        </header>
+        </header> -->
     
         <!-- Content Sections -->
         <section id="home" class="tab-content">
