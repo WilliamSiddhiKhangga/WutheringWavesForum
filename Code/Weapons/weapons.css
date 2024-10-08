@@ -21,7 +21,7 @@ h1{
     gap: 10px;
 }
 
-.element_category button{
+button{
     padding: 10px 20px;
     background: rgb(219, 217, 217);
     font-size: 18px;
@@ -30,19 +30,19 @@ h1{
     cursor: pointer;
 }
 
-.element_category button:hover{
+button:hover{
     background: rgb(255, 255, 255);
 }
 
-.element_category button.active{
+button.active{
     background: rgb(8, 163, 253);
 }
 
-.element_category button.active:hover{
+button.active:hover{
     background: rgb(128, 208, 255);
 }
 
-.character.hide{
+.weapons.hide{
     display: none;
 }
 
@@ -50,8 +50,8 @@ h1{
     display: flex;
 }
 
-/* Character Section */
-.character-section{
+/* weapons Section */
+.weapons-section{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     width: 100%;
@@ -59,11 +59,11 @@ h1{
     gap: 20px;
 }
 
-.character-section::-webkit-scrollbar{
+.weapons-section::-webkit-scrollbar{
     display: none;
 }
 
-.character-img{
+.weapons-img{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -72,14 +72,14 @@ h1{
     margin-bottom: 10px;
 }
 
-.character-img figure{
+.weapons-img figure{
     flex-grow: 1;
     flex-basis: 300px;
     text-align: center;
     cursor: pointer;
 }
 
-.character-img a{
+.weapons-img a{
     color: black;
 }
 
@@ -93,7 +93,7 @@ h1{
 }
 
 .b5{
-    width: 180px;
+    width: 190px;
     position: relative;
     overflow: hidden;
 }
@@ -110,7 +110,7 @@ h1{
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
-    width: 94.5%;
+    width: 82%;
     text-align: center;
     margin-left: 5px;
 }
