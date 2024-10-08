@@ -21,9 +21,9 @@ body{
     display: flex;
     min-height: 200vh;
     background-color: #162938;
-    background: url('Images/Home-Images/background-2.jpg') no-repeat fixed;
-    background-position: 100% ; /* Menggeser background ke kanan */
-    background-size: auto 110%; 
+    /* background: url('Images/Home-Images/background-2.jpg') no-repeat fixed; */
+    background-size: cover;
+    background-position: 100% 0%;
     overflow: scroll;
 }
 
