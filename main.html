@@ -5,40 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="navbarStyles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home')">
-    <script src="navbarScripts.js"></script>
-
-    <!-- <audio id="background-music" autoplay loop muted>
-        <source src="Audio/wuwa-main.mp3" type="audio/mpeg">
-    </audio>   -->
+<body class="body-home">
 
     <nav class="nav-bar">
         <ul>
             <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
-            <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/home-icon.png">Resonators</a></li>
-            <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/home-icon.png">Weapons</a></li>
-            <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/home-icon.png">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/home-icon.png">Forum</a></li>
+            <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
+            <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
+            <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/image-removebg-preview (1).png">Forum</a></li>
         </ul>
     </nav>
     
     <div class="content-container">
         <header>
             <nav class="navigation">
-                <a href="#" data-tab="News">News</a>
-                <a href="#" data-tab="about">About</a>
-                <a href="#" data-tab="contact">Contact</a>
+                <a href="#" data-tab="News">
+                    <i class="fas fa-scroll"></i> News
+                </a>
+                <a href="#" data-tab="profile" >
+                    <i class="fas fa-user-circle"></i> Profile
+                </a>                
+                <!-- <a href="#" data-tab="contact">Contact</a> -->
                 <button class="btnLogin-popup" id="loginBtn">Login</button>
             </nav>
         </header>
     
         <!-- Content Sections -->
-        <section id="home" class="tab-content">
+        <!-- <section id="home" class="tab-content">
             <h2>Home Page</h2>
             <p>Welcome to the home page content.</p>
-        </section>
+        </section> -->
     
         <section id="News" class="tab-content" style="display:none;">
             <h2>News</h2>
@@ -69,31 +70,46 @@
                 </div>
             </div>
 
-             <!-- Event Banner Section -->
-             <h2 class="current-banner-title">Current Banner</h2>
-             <div class="event-banner-section">
-                 <div class="event-banner">
-                     <img src="Images/Home-Images/zhezhi-intro.jpg" alt="Event 2 Banner">
-                     <h3>Event 1: Chromatic Prose</h3>
-                 </div>
-                 <div class="event-banner">
-                     <img src="Images/Home-Images/xiangli-yao-intro.jpg" alt="Event 1 Banner">
-                     <h3>Event 2: Celestial Revelation</h3>
-                 </div>
-             </div>
+            <!-- Event Banner Section -->
+            <h2 class="current-banner-title">Current Banner</h2>
+            <div class="event-banner-section">
+                <div class="event-banner">
+                    <img src="Images/Home-Images/zhezhi-intro.jpg" alt="Event 2 Banner">
+                    <h3>Event 1: Chromatic Prose</h3>
+                </div>
+                <div class="event-banner">
+                    <img src="Images/Home-Images/xiangli-yao-intro.jpg" alt="Event 1 Banner">
+                    <h3>Event 2: Celestial Revelation</h3>
+                </div>
+            </div>
         </section>              
         
-        <section id="about" class="tab-content" style="display:none;">
-            <h2>About Us</h2>
-            <p>Learn more about us here.</p>
+        <section id="profile" class="tab-content" style="display:none;">
+            <div class="profile-tittle">
+                <h2>My Profile</h2> 
+            </div>
+            <div class="profile-container">
+                <!-- Foto Profil -->
+                <div class="profile-photo">
+                    <img src="Images/Resonators/Changli-removebg-preview.png" alt="Profile Photo">
+                </div>
+                <!-- Informasi Pengguna -->
+                <div class="profile-info">
+                    <h3>Nama Pengguna : Pacar ChangLi</h3>
+                    <p><strong>Username:</strong> nama_pengguna123</p>
+                    <p><strong>Email:</strong> email@contoh.com</p>
+                    <p><strong>Deskripsi:</strong> Cuman Main Changli</p>
+                    <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                </div>
+            </div>
         </section>
+        
 
         <section id="contact" class="tab-content" style="display:none;">
             <h2>Contact Us</h2>
             <p>Get in touch through our contact page.</p>
         </section>
     </div>
-
-    <script src="scripts.js"></script>  
+    <script src="scripts.js"></script>
 </body>
 </html>

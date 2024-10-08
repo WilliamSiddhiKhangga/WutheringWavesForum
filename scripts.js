@@ -10,7 +10,7 @@ function handleLoginState() {
 
     if (isLoggedIn) {
         if (window.location.pathname.includes('index.html')) {
-            window.location.href = 'main.html';
+            window.location.href = 'main.html?tab=News';
         } else if (window.location.pathname.includes('main.html')) {
             if (btnPopup) {
                 btnPopup.textContent = 'Logout';
@@ -29,8 +29,14 @@ function handleLoginState() {
 
 function handleLoginSuccess() {
     localStorage.setItem('isLoggedIn', 'true');
+    // Tampilkan tab Profile setelah login
+    const profileTab = document.getElementById('profile-tab');
+    if (profileTab) {
+        profileTab.style.display = 'block';
+    }
     window.location.href = 'main.html';
 }
+
 
 function handleLogout() {
     localStorage.removeItem('isLoggedIn');
