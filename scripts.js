@@ -1,7 +1,7 @@
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
+const btnPopup = document.getElementById('loginBtn');
 const iconClose = document.querySelector('.icon-close');
 const audio = document.getElementById('background-music');
 
@@ -11,7 +11,8 @@ function handleLoginState() {
     if (isLoggedIn) {
         if (window.location.pathname.includes('index.html')) {
             window.location.href = 'main.html';
-        } else if (window.location.pathname.includes('main.html')) {
+        // } else if (window.location.pathname.includes('main.html')) {
+        } else {
             if (btnPopup) {
                 btnPopup.textContent = 'Logout';
                 btnPopup.removeEventListener('click', redirectToLogin);

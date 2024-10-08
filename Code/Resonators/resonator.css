@@ -21,7 +21,7 @@ h1{
     gap: 10px;
 }
 
-button{
+.element_category button{
     padding: 10px 20px;
     background: rgb(219, 217, 217);
     font-size: 18px;
@@ -30,15 +30,15 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.element_category button:hover{
     background: rgb(255, 255, 255);
 }
 
-button.active{
+.element_category button.active{
     background: rgb(8, 163, 253);
 }
 
-button.active:hover{
+.element_category button.active:hover{
     background: rgb(128, 208, 255);
 }
 
