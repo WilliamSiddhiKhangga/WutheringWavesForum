@@ -15,8 +15,15 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    z-index: 10;
+    z-index: 12;
+    top: 0;
+    transition: .3s ease;
 }
+
+.nav-bar.active ul {
+    left: 0;
+}
+
 .nav-bar img {
     height: 60px;
     width: 60px;
@@ -53,5 +60,20 @@
 
 .content-container {
     margin-left: 140px;
+    margin-top: 60px;
     overflow: hidden;
+}
+
+@media (max-width: 920px) {
+    .nav-bar ul {
+        left: -140px;
+    }
+
+    .nav-bar.active {
+        left: 0;
+    }
+
+    .content-container {
+        margin-left: 0%;
+    }
 }

@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="navbarStyles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="headerFooterStyles.css">
 </head>
-<body class="body-home">
+<body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home')">
+    <script src="navbarScripts.js"></script>
+    <script src="headerScripts.js"></script>
 
-    <nav class="nav-bar">
+    <!-- <audio id="background-music" autoplay loop muted>
+        <source src="Audio/wuwa-main.mp3" type="audio/mpeg">
+    </audio>   -->
+
+    <header>
+        <div class="header">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="header-title">Wuthering Waves</h2>
+            <button class="login-btn" id="loginBtn">Login</button>
+        </div>
+    </header>
+
+    <nav class="nav-bar" id="nav-bar">
         <ul>
             <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
             <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
@@ -22,7 +40,8 @@
     </nav>
     
     <div class="content-container">
-        <header>
+
+        <!-- <header>
             <nav class="navigation">
                 <a href="#" data-tab="News">
                     <i class="fas fa-scroll"></i> News
@@ -33,7 +52,7 @@
                 <!-- <a href="#" data-tab="contact">Contact</a> -->
                 <button class="btnLogin-popup" id="loginBtn">Login</button>
             </nav>
-        </header>
+        </header> -->
     
         <!-- Content Sections -->
         <!-- <section id="home" class="tab-content">

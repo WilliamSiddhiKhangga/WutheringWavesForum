@@ -4,11 +4,28 @@
         <link rel="stylesheet" href="/Code/Weapons/weapons.css" />
         <link rel="stylesheet" href="/navbarStyles.css" />
         <script src="weapons.js" defer></script>
-    </head>
+        <link rel="stylesheet" href="/headerFooterStyles.css">
+</head>
 
     <body onload="highlightNavbar('/weapons.html', 'weapons')">
         <script src="/navbarScripts.js"></script>
-        <nav class="nav-bar">
+        <script src="/headerScripts.js"></script>
+    <!-- <script src="scripts.js"></script> -->
+
+
+    <header>
+        <div class="header">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2 class="header-title">Wuthering Waves</h2>
+            <button class="login-btn" id="loginBtn">Login</button>
+        </div>
+    </header>
+
+    <nav class="nav-bar" id="nav-bar">
             <ul>
                 <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
                 <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
