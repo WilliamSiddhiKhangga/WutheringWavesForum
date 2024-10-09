@@ -1,3 +1,10 @@
+function headerTitleController(title) {
+    const headerTitle = document.createElement('div');
+    headerTitle.classList.add('header-title');
+    headerTitle.innerHTML = `<h2>${title}</h2>`;
+    document.querySelector('.header').appendChild(headerTitle);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navbar = document.getElementById('nav-bar');

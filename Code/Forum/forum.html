@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
-<body onload="highlightNavbar('/forum.html', 'forum'); closePostForm();">
+<body onload="highlightNavbar('/forum.html', 'forum'); closePostForm(); headerTitleController('Forum');">
     <script src="forumScripts.js"></script>
     <script src="/navbarScripts.js"></script>
     <script src="/headerScripts.js"></script>
@@ -23,7 +23,6 @@
                 <span></span>
                 <span></span>
             </div>
-            <h2 class="header-title">Wuthering Waves</h2>
             <button class="login-btn" id="loginBtn">Login</button>
         </div>
     </header>
@@ -34,7 +33,7 @@
             <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
             <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
             <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/image-removebg-preview (1).png">Forum</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
         </ul>
     </nav>
     

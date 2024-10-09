@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     height: auto;
     overflow: hidden;
     padding: 20px;
-    background: url('Images/Home-Images/background-2.jpg');
+    /* background: url('Images/Home-Images/background-2.jpg'); */
     background-repeat: no-repeat;
     background-size: 100% 105%;
     overflow-y: auto; /* If content gets too long, this will make it scrollable */
@@ -498,4 +498,9 @@ button.next {
     }
 }
 
-
+@media (max-width: 920px) {
+    .event-banner-section {
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+}

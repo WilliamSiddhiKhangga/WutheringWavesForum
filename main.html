@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="navbarStyles.css">
     <link rel="stylesheet" href="headerFooterStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home')">
+<body class="body-home" onload="showTab('News'); highlightNavbar('/main.html', 'home'); headerTitleController('Wuthering Waves');">
     <script src="navbarScripts.js"></script>
     <script src="headerScripts.js"></script>
 
@@ -24,7 +24,6 @@
                 <span></span>
                 <span></span>
             </div>
-            <h2 class="header-title">Wuthering Waves</h2>
             <nav class="navigation">
                 <a href="#" data-tab="News">
                     <i class="fas fa-scroll"></i> News
@@ -37,12 +36,12 @@
     </header>
 
     <nav class="nav-bar" id="nav-bar">
-        <ul>
+        <ul id="nav-bar-ul">
             <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
             <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
             <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
             <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/image-removebg-preview (1).png">Forum</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
         </ul>
     </nav>
     
@@ -55,13 +54,13 @@
                 </a>
                 <a href="#" data-tab="profile" >
                     <i class="fas fa-user-circle"></i> Profile
-                </a>                
+                </a>
                 <a href="#" data-tab="contact">Contact</a>
                 <button class="btnLogin-popup" id="loginBtn">Login</button>
             </nav>
-        </header> -->
-    
-        <!-- Content Section -->
+        </header>
+     -->
+        <!-- Content Sections -->
         <!-- <section id="home" class="tab-content">
             <h2>Home Page</h2>
             <p>Welcome to the home page content.</p>
