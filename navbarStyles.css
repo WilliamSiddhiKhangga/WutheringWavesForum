@@ -31,8 +31,16 @@
     align-items: center;
     justify-content: left;
     margin-right: 0px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
+
+.fa-bullhorn {
+    color: white;
+    font-weight: 100;
+    font-size: 35px;
+    margin-bottom: 4px;
+}
+
 .nav-bar li {
     display: flex;
     width: 140px;

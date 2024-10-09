@@ -3,12 +3,12 @@
         <title>Resonators</title>
         <link rel="stylesheet" href="/Code/Weapons/weapons.css" />
         <link rel="stylesheet" href="/navbarStyles.css" />
-        <script src="weapons.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="/headerFooterStyles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-
-    <body onload="highlightNavbar('/weapons.html', 'weapons')">
+        <script src="weapons.js" defer></script>
+</head>    
+    <body onload="highlightNavbar('/weapons.html', 'weapons'); headerTitleController('Weapons');"">
         <script src="/navbarScripts.js"></script>
         <script src="/headerScripts.js"></script>
 
@@ -19,20 +19,19 @@
                 <span></span>
                 <span></span>
             </div>
-            <h2 class="header-title">Wuthering Waves</h2>
             <button class="login-btn" id="loginBtn">Login</button>
         </div>
     </header>
 
     <nav class="nav-bar" id="nav-bar">
-            <ul>
-                <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
-                <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
-                <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
-                <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
-                <li id="forum"><a href="/Code/Forum/forum.html"><img src="/Images/Navbar-Icons/image-removebg-preview (1).png">Forum</a></li>
-            </ul>
-        </nav>
+        <ul id="nav-bar-ul">
+            <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+            <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
+            <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
+            <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
+            <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
+        </ul>
+    </nav>
 
     <body>
             <h1>Weapons Archive</h1>
