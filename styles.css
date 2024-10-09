@@ -65,14 +65,17 @@ body::-webkit-scrollbar {
     user-select: none;
 }
 
-.navigation a {
+/* .navigation a {
     position: relative;
     font-size: 1.1em;
+    margin-top: 10px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    margin-right: 50px;
+    left: 950px;
+    top: 20px;
 }
 
 .navigation a::after {
@@ -92,7 +95,7 @@ body::-webkit-scrollbar {
 .navigation a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
-}
+} */
 
 .navigation .btnLogin-popup {
     width: 130px;
