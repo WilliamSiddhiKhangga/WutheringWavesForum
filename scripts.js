@@ -30,8 +30,14 @@ function handleLoginState() {
 
 function handleLoginSuccess() {
     localStorage.setItem('isLoggedIn', 'true');
+    // Tampilkan tab Profile setelah login
+    const profileTab = document.getElementById('profile-tab');
+    if (profileTab) {
+        profileTab.style.display = 'block';
+    }
     window.location.href = 'main.html';
 }
+
 
 function handleLogout() {
     localStorage.removeItem('isLoggedIn');
