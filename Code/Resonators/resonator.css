@@ -79,6 +79,10 @@ h1{
     cursor: pointer;
 }
 
+.character-img figure:hover{
+    transform: scale(1.15);
+}
+
 .character-img a{
     color: black;
 }

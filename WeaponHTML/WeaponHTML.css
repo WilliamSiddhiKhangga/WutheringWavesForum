@@ -45,13 +45,25 @@ body {
 .weapon-header {
     display: flex;
     align-items: center;
-    margin-bottom: 30px; /* Increased spacing */
+    margin-bottom: 30px;
 }
 
 .weapon-img {
-    width: 120px;  /* Larger image */
+    width: 120px;
     height: 120px;
     margin-right: 25px;
+    border: 1px solid rgb(201, 174, 19);
+    border-radius: 5px;
+
+}
+
+.weapon-img.b4{
+    width: 120px;
+    height: 120px;
+    margin-right: 25px;
+    border: 1px solid rgb(124, 6, 171);
+    border-radius: 5px;
+
 }
 
 .weapon-info {
@@ -61,22 +73,28 @@ body {
 }
 
 .weapon-stats p {
-    margin: 5px 0;  /* Improve spacing between stats */
+    margin: 5px 0;
 }
 
 .weapon-name {
-    font-size: 26px;  /* Slightly larger name */
+    font-size: 26px;
     color: #f4d03f;
-    letter-spacing: 1px;  /* Add some letter spacing */
+    letter-spacing: 1px; 
+}
+
+.weapon-name.b4{
+    font-size: 26px;
+    color: rgb(124, 6, 171);
+    letter-spacing: 1px; 
 }
 
 .weapon-stats p, .ascension-materials h3, .weapon-skill h3, .about-section h3 {
-    font-size: 16px;  /* Larger font for better readability */
+    font-size: 16px;
     line-height: 1.5;
 }
 
 .material, .skill-info, .about-section {
-    line-height: 1.6;  /* Improve readability with more space between lines */
+    line-height: 1.6;
 }
 
 /* Level and Rank Section */
