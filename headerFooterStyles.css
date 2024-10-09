@@ -8,9 +8,10 @@
     z-index: 11;
 }
 
-.header h2{
+.header-title h2{
     top: 8px;
-    margin-left: 40%;
+    margin-left: calc(50% + 70px);
+    transform: translateX(-50%);
     color: rgb(255, 255, 255);
     font-size: 40px;
     font-family: OCR-A;
@@ -104,6 +105,7 @@
     }
     
     .header h2 {
+        transform: translate(0%);
         margin-left: 25%;
     }
 
@@ -118,7 +120,7 @@
 
 @media (max-width: 720px) {
     .header h2 {
-        margin-left: 15%;
+        margin-left: 80px;
     }
 }
 

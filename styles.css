@@ -38,7 +38,7 @@ body::-webkit-scrollbar {
     height: auto;
     overflow: hidden;
     padding: 20px;
-    background: url('Images/Home-Images/background-2.jpg');
+    /* background: url('Images/Home-Images/background-2.jpg'); */
     background-repeat: no-repeat;
     background-size: 100% 105%;
     overflow-y: auto; /* If content gets too long, this will make it scrollable */
@@ -66,15 +66,28 @@ body::-webkit-scrollbar {
 }
 
 .navigation a {
-    position: relative;
-    font-size: 1.1em;
+    /* position: absolute; */
+    /* font-size: 1.1em; */
     font-weight: bold;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 40px;
+    /* margin-left: 40px; */
+    margin-right: 10px;
+    right: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10px;
+    height: 100px;
+    margin-top: 8px;
+    margin-left: 800px;
+    z-index: 2000;
 }
 
+.news-profile{
+    display: flex;
+}
 .navigation a::after {
     content: '';
     position: absolute;
@@ -495,4 +508,9 @@ button.next {
     }
 }
 
-
+@media (max-width: 920px) {
+    .event-banner-section {
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+}
