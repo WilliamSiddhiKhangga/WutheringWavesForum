@@ -29,7 +29,7 @@
     text-decoration: none;
     font-weight: 500;
     margin-right: 20px;
-    left: 78%;
+    left: 86%;
     top: 20px;
 }
 
@@ -115,46 +115,92 @@
 
 
 /* =========================== FOOTERS ===============================*/
-.footer {
-    height: 300px;
-    font-family: OCR-A;
-    width: 100%-140px;
-    display: block;
-    margin-left: 140px;
-    margin-top: 100px;
+
+footer {
     background-color: rgb(19, 48, 64);
     color: white;
+    /* padding: 20px 0; */
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 140px;
+    width: calc(100%-140px);
+    bottom: 0;
 }
 
-
-
-@media (max-width: 920px) {
-    .header {
-        text-align: left;
-    }
-    
-    .header h2 {
-        transform: translate(0%);
-        margin-left: 25%;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .footer {
-        margin-left: 0px;
-    }
+.footer-content{
+    height: 25px;
 }
 
-@media (max-width: 720px) {
-    .header h2 {
-        margin-left: 80px;
-    }
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-@media (max-width: 620px) {
-    .header h2{
-        display: none;
-    }
+.footer-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.socials li {
+    margin: 0 15px;
+}
+
+.socials li a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.socials li a:hover {
+    color: #b0b0b069;
+}
+
+.footer-bottom {
+    background-color: #202020;
+    padding: 10px 0;
+    font-size: 12px;
+    bottom: -40px;
+    position: relative;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+}
+
+.scroll-up {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.scroll-up:hover {
+    color: #b0b0b017;
+}
+
+/* Scroll-up animation */
+.scroll-up {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+footer:hover .scroll-up {
+    opacity: 1;
+    pointer-events: all;
 }

@@ -9,8 +9,8 @@ function handleLoginState() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 
     if (isLoggedIn) {
-        if (window.location.pathname.includes('index.html')) {
-            window.location.href = 'main.html';
+        if (window.location.pathname.includes('login.html')) {
+            window.location.href = 'index.html';
         // } else if (window.location.pathname.includes('main.html')) {
         } else {
             if (btnPopup) {
@@ -35,7 +35,7 @@ function handleLoginSuccess() {
     if (profileTab) {
         profileTab.style.display = 'block';
     }
-    window.location.href = 'main.html';
+    window.location.href = 'index.html';
 }
 
 
@@ -53,12 +53,12 @@ function openPopup() {
 
 function closePopup() {
     wrapper.classList.remove('active-popup');
-    window.location.href = 'main.html'; // Redirect to main.html
+    window.location.href = 'index.html'; // Redirect to main.html
 }
 
 
 function redirectToLogin() {
-    window.location.href = 'index.html?openLogin=true';
+    window.location.href = 'login.html?openLogin=true';
 }
 
 function showTab(tabId) {
@@ -160,7 +160,7 @@ function handleScrollEffects() {
 document.addEventListener('DOMContentLoaded', () => {
     handleLoginState();
 
-    if (window.location.pathname.includes('index.html')) {
+    if (window.location.pathname.includes('login.html')) {
         const params = new URLSearchParams(window.location.search);
         if (params.get('openLogin') === 'true') {
             openPopup();
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (window.location.pathname.includes('main.html')) {
+    if (window.location.pathname.includes('index.html')) {
         handleTabNavigation();
         initNewsSlider();
     }
