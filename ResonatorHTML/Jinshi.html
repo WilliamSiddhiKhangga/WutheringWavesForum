@@ -16,7 +16,7 @@
 
     <div class="container">
         <div class="character-section">
-            <img src="" alt="Jinshi" class="character-img">
+            <img src="/Images/Resonators/Jinshi.png" alt="Jinshi" class="character-img">
             <div class="character-info">
                 <h1>Jinshi Build Guide</h1>
                 <div class="rating">★★★★★</div>
@@ -31,13 +31,21 @@
                 <div class="stat-item">Energy: 100</div>
             </div>
         </div>
+
         <div class="menu-section">
-            <button class="menu-btn">Overview</button>
+            <button class="menu-btn" onclick="scrollToBuild()">Overview</button>
             <button class="menu-btn">Skills</button>
             <button class="menu-btn">Resonance</button>
             <button class="menu-btn">Build (Echo & Weapon)</button>
             <button class="menu-btn">Ascension</button>
         </div>
     </div>
+
+    <script>
+        function scrollToBuild() {
+            const buildSection = document.getElementById("overview");
+            buildSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 </body>
 </html>
