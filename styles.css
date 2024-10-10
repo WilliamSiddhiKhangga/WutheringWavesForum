@@ -99,7 +99,7 @@ body::-webkit-scrollbar {
 
 .wrapper .form-box {
     width: 100%;
-    padding: 40px; 
+    padding: 30px; 
 }
 
 .wrapper .form-box.login {
@@ -129,7 +129,7 @@ body::-webkit-scrollbar {
     right: 0;
     width: 45px;
     height: 45px;
-    background: #162938;
+    background-color: rgb(19, 48, 64);
     font-size: 2em;
     color: #fff;
     display: flex;
@@ -188,7 +188,7 @@ body::-webkit-scrollbar {
     position: absolute;
     right: 8px;
     font-size: 1.2em;
-    color: #162938;
+    color: #ffffff;
     line-height: 57px;
 }
 
@@ -220,7 +220,7 @@ body::-webkit-scrollbar {
 .btn {
     width: 100%;
     height: 45px;
-    background: #162938;
+    background-color: rgb(19, 48, 64);
     border: none;
     outline: none;
     border-radius: 6px;
@@ -338,6 +338,13 @@ button.next {
     right: 10px;
 }
 
+.article-content {
+    padding: 10px 0; /* Padding around the article */
+    border-top: 1px solid #dddddd; /* Divider line */
+    margin-top: 10px;
+    display: none; /* Start hidden, will show on toggle */
+}
+
 .current-banner-title {
     text-align: center; /* Center the text */
     font-size: 28px; /* Set font size */
@@ -382,66 +389,118 @@ button.next {
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
+.hidden {
+    display:none;
+}
+
+/* Profil Section */
+#profile {
+    margin-top: 10px;
+    padding: 20px;
+    min-height: 70vh;
+    background-color: rgb(19, 48, 64);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#profile:hover {
+    transform: scale(1.02); /* Efek zoom saat hover */
+}
+
+.profile-title h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff; 
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+/* Kontainer Profil */
 .profile-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px;
+}
+
+/* Foto Profil */
+.profile-photo {
+    display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 20px; */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    /* background-color: #4b4343; */
-    backdrop-filter: blur(40px);
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin-bottom: 20px; /* Add margin below the photo */
 }
 
 .profile-photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
+    width: 150px; /* Atur ukuran foto profil */
+    height: 150px; /* Atur ukuran foto profil */
+    border-radius: 50%; /* Membuat foto profil menjadi bulat */
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Informasi Pengguna */
 .profile-info {
-    max-width: 500px;
+    flex: 2; /* Memungkinkan informasi pengguna mengisi bagian kanan */
+    background-color: transparent; /* Set background to transparent */
+    padding: 0; /* Remove padding */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
-.profile-tittle h2 {
-    color: white;
-    margin-top: 50px;
-    background-color: #162938;
-    padding: 10px;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
 .profile-info h3 {
-    margin-bottom: 10px;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    color: #ffffff; /* Warna judul informasi */
+    margin-bottom: 15px;
 }
 
 .profile-info p {
+    font-size: 1em;
     margin: 5px 0;
-    color: white;
+    color: #ffffff;  /* Warna teks lembut */
 }
 
-@media screen and (max-width: 768px) {
+.profile-info strong {
+    color: #ffffff;  /* Warna untuk teks tebal */
+}
+
+/* Link Website */
+.profile-info a {
+    color: #ffffff; /* Warna untuk link */
+    text-decoration: none; /* Tanpa garis bawah */
+}
+
+.profile-info a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Bio Container */
+.bio-container {
+    margin-top: 10px; /* Tambah margin atas untuk jarak */
+}
+
+#bio {
+    width: 100%; /* Memastikan textarea mengisi lebar kontainer */
+    padding: 10px; /* Padding untuk teks di dalam textarea */
+    border-radius: 5px; /* Sudut membulat */
+    border: 1px solid #ccc; /* Border abu-abu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan ringan */
+    resize: none; /* Nonaktifkan ukuran ulang textarea */
+}
+
+
+@media (max-width: 768px) {
     .profile-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Ganti menjadi kolom pada layar kecil */
+        align-items: center;
     }
 
-    .profile-photo img {
-        margin: 0 auto 20px;
+    .profile-photo {
+        margin-right: 0; /* Hapus margin di sebelah kanan */
+        margin-bottom: 20px; /* Tambah margin di bawah */
     }
 
-    .profile-info {
-        max-width: 100%;
+    #bio {
+        height: auto; /* Atur tinggi textarea otomatis */
     }
 }
 

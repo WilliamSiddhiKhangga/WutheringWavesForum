@@ -7,16 +7,24 @@ const audio = document.getElementById('background-music');
 
 function handleLoginState() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const profileSection = document.getElementById('profile');  // Profile section
+    const profileIcon = document.getElementById('profile-icon'); // Profile icon in the header
 
     if (isLoggedIn) {
         if (window.location.pathname.includes('login.html')) {
             window.location.href = 'index.html';
-        // } else if (window.location.pathname.includes('main.html')) {
         } else {
             if (btnPopup) {
                 btnPopup.textContent = 'Logout';
                 btnPopup.removeEventListener('click', redirectToLogin);
                 btnPopup.addEventListener('click', handleLogout);
+            }
+            // Show the profile section and profile icon
+            if (profileSection) {
+                profileSection.classList.remove('hidden');
+            }
+            if (profileIcon) {
+                profileIcon.classList.remove('hidden');
             }
         }
     } else {
@@ -25,8 +33,16 @@ function handleLoginState() {
             btnPopup.removeEventListener('click', handleLogout);
             btnPopup.addEventListener('click', redirectToLogin);
         }
+        // Hide the profile section and profile icon
+        if (profileSection) {
+            profileSection.classList.add('hidden');
+        }
+        if (profileIcon) {
+            profileIcon.classList.add('hidden');
+        }
     }
 }
+
 
 function handleLoginSuccess() {
     localStorage.setItem('isLoggedIn', 'true');

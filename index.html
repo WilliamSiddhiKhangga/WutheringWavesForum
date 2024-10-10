@@ -10,16 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 
 <body class="body-home" onload="showTab('News'); highlightNavbar('/index.html', 'home'); headerTitleController('Wuthering Waves');">
     <script src="navbarScripts.js"></script>
     <script src="headerScripts.js"></script>
-
-    <!-- <audio id="background-music" autoplay loop muted>
-        <source src="Audio/wuwa-main.mp3" type="audio/mpeg">
-    </audio>   -->
-
     <header>
         <div class="header">
             <div class="hamburger" id="hamburger">
@@ -28,10 +22,7 @@
                 <span></span>
             </div>
             <nav class="navigation">
-                <!-- <a href="#" data-tab="News">
-                    <i class="fas fa-scroll"></i> News
-                </a> -->
-                <a href="#" data-tab="profile" >
+                <a href="#" data-tab="profile" id="profile-icon" class="hidden">
                     <i class="fas fa-user-circle"></i></a> 
             </nav>
             <button class="login-btn" id="loginBtn">Login</button>
@@ -49,48 +40,28 @@
     </nav>
     
     <div class="content-container">
-
-        <!-- <header>
-            <nav class="navigation">
-                <a href="#" data-tab="News">
-                    <i class="fas fa-scroll"></i> News
-                </a>
-                <a href="#" data-tab="profile" >
-                    <i class="fas fa-user-circle"></i> Profile
-                </a>
-                <a href="#" data-tab="contact">Contact</a>
-                <button class="btnLogin-popup" id="loginBtn">Login</button>
-            </nav>
-        </header>
-     -->
-        <!-- Content Sections -->
-        <!-- <section id="home" class="tab-content">
-            <h2>Home Page</h2>
-            <p>Welcome to the home page content.</p>
-        </section> -->
-    
         <section id="News" class="tab-content" style="display:none;">
             <h2>News</h2>
             <div class="news-slider-wrapper">
                 <div class="news-slider">
                     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                     <div class="slider-container">
-                        <div class="news-slide">
+                        <div class="news-slide" id="slide-1">
                             <div class="news-slide-content">
                                 <img src="Images/Home-Images/home-news-1.avif" alt="News 1">
-                                <h3 class="headline">Headline News 1</h3>
+                                <h3 class="headline">On Going Banner this version..</h3>
                             </div>
                         </div>
                         <div class="news-slide">
-                            <div class="news-slide-content">
+                            <div class="news-slide-content" id="slide-">
                                 <img src="Images/Home-Images/home-news-2.jpg" alt="News 2">
-                                <h3 class="headline">Headline News 2</h3>
+                                <h3 class="headline">MT. Fimament Explained..!!</h3>
                             </div>
                         </div>
                         <div class="news-slide">
-                            <div class="news-slide-content">
+                            <div class="news-slide-content" id="slide-3">
                                 <img src="Images/Home-Images/home-news-3.jpg" alt="News 3">
-                                <h3 class="headline">Headline News 3</h3>
+                                <h3 class="headline">Free supplies in next update???</h3>
                             </div>
                         </div>
                     </div>
@@ -111,9 +82,9 @@
                 </div>
             </div>
         </section>              
-        
-        <section id="profile" class="tab-content" style="display:none;">
-            <div class="profile-tittle">
+
+        <section id="profile" class="tab-content hidden">
+            <div class="profile-title">
                 <h2>My Profile</h2> 
             </div>
             <div class="profile-container">
@@ -124,20 +95,20 @@
                 <!-- Informasi Pengguna -->
                 <div class="profile-info">
                     <h3>Nama Pengguna : Pacar ChangLi</h3>
-                    <p><strong>Username:</strong> nama_pengguna123</p>
+                    <p><strong>Username:</strong> FallenSKy51</p>
                     <p><strong>Email:</strong> email@contoh.com</p>
-                    <p><strong>Deskripsi:</strong> Cuman Main Changli</p>
                     <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                    <p><strong>Tanggal Bergabung:</strong> 1 Januari 2022</p>
+                    <div class="bio-container">
+                        <p><strong>Bio:</strong></p>
+                        <textarea id="bio" rows="4" placeholder="Cuman Main Changli."></textarea>
+                    </div>
                 </div>
             </div>
         </section>
-        
-
-        <section id="contact" class="tab-content" style="display:none;">
-            <h2>Contact Us</h2>
-            <p>Get in touch through our contact page.</p>
-        </section>
     </div>
+    
+
     <footer>
         <div class="footer-content">
             <p>Thank you for visiting! Find us on social media for more updates.</p>
