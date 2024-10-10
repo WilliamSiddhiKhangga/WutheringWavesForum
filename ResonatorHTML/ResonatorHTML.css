@@ -51,7 +51,15 @@ body {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    border: 3px solid #663399;
+    border: 3px solid rgb(201, 174, 19);
+    margin-bottom: 20px;
+}
+
+.character-img.b4 {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid rgb(124, 6, 171);
     margin-bottom: 20px;
 }
 
@@ -111,6 +119,27 @@ h1 {
     background-color: #555;
 }
 
+/* Skills section styling */
+.skills-section {
+    position: absolute;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin-top: 540px;
+    text-align: left; 
+}
+
+.skills-content img {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.skills-content p {
+    margin-top: 0;
+    color: white;
+}
 
 /* RESPONSIVE DESIGN */
 /* Adjust for screens smaller than 900px (tablet) */
