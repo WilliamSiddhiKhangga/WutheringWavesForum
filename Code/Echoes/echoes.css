@@ -145,7 +145,7 @@ button.active:hover{
 
 .cost3 figcaption{
     position: absolute;
-    bottom: -50px;
+    bottom: -70px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
     width: 82%;
@@ -154,7 +154,7 @@ button.active:hover{
 }
 
 .cost3:hover figcaption{
-    bottom: 5.3px;
+    bottom: 8.5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -185,7 +185,7 @@ button.active:hover{
 }
 
 .cost1:hover figcaption{
-    bottom: 5.3px;
+    bottom: 8.5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
