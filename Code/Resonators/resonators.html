@@ -7,12 +7,13 @@
         <link rel="stylesheet" href="/styles.css"/>
         <link rel="stylesheet" href="/headerFooterStyles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <script src="resonators.js" defer></script>
     </head>
 
     <body onload="highlightNavbar('/resonators.html', 'resonators'); headerTitleController('Resonators');"">
         <script src="/navbarScripts.js"></script>
         <script src="/headerScripts.js"></script>
+        <script src="resonators.js" defer></script>
+        <script src="/Code/Resonators/search.js"></script>
         
         <header>
             <div class="header">
@@ -54,6 +55,11 @@
                         <button data-name="spectro">Spectro</button>
                         <button data-name="havoc">Havoc</button>
                         <button data-name="glacio">Glacio</button>
+                    </div>
+
+                    <div class="search">
+                        <input type="search" placeholder="search character.......">
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
 
                     <div class="filterable">
@@ -108,6 +114,24 @@
                             </figure>
                         </div>
 
+                        <div class="character" data-name="glacio">
+                            <figure class="b4">
+                                <a href="/ResonatorHTML/Baizhi.html">
+                                <img width="180px" src="\Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
+                                <figcaption>Baizhi</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="character" data-name="havoc">
+                            <figure class="b4">
+                                <a href="">
+                                <img width="180px" height="245px" src="/Images/Resonators/Taoqi-removebg-preview.png" alt="Taoqi">
+                                <figcaption>Taoqi</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+
                         <div class="character" data-name="aero">
                             <figure class="b5">
                                 <img width="180px" src="\Images\Resonators\Jiyan-removebg-preview.png" alt="Jiyan">
@@ -119,13 +143,6 @@
                             <figure class="b5">
                                 <img width="180px" src="\Images\Resonators\Chalcaro-removebg-preview.png" alt="Chalcaro">
                                 <figcaption>Calcharo</figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="character" data-name="glacio">
-                            <figure class="b4">
-                                <img width="180px" src="\Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
-                                <figcaption>Baizhi</figcaption>
                             </figure>
                         </div>
 
