@@ -232,3 +232,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     handleScrollEffects();
 });
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.querySelector('footer').classList.remove('hidden');
+    }, 3000);  // Delay of 3 seconds (3000 milliseconds)
+});
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('profile').classList.remove('hidden');
+    }, 10000);  // Delay 3 detik (3000 milidetik)
+});
