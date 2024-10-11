@@ -36,7 +36,7 @@ body::-webkit-scrollbar-track {
     background-color: #162938;
     background-size: cover;
     background-position: 100% 0%;
-    overflow: scroll;
+    overflow-y: overlay;
 }
 
 /* Mengatur background-image agar memenuhi seluruh layar */
