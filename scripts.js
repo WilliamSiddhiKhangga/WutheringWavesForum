@@ -11,7 +11,6 @@ function handleLoginState() {
     if (isLoggedIn) {
         if (window.location.pathname.includes('index.html')) {
             window.location.href = 'main.html';
-        // } else if (window.location.pathname.includes('main.html')) {
         } else {
             if (btnPopup) {
                 btnPopup.textContent = 'Logout';
