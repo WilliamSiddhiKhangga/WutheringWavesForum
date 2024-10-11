@@ -1,5 +1,6 @@
-const category = document.querySelectorAll(".element_category button");
-const filterElement = document.querySelectorAll('.filterable .character');
+const category = document.querySelectorAll(".echoes_category button");
+const filterElement = document.querySelectorAll('.filterable .echoes');
+
 
 const filterCategory = e => {
     document.querySelector('.active').classList.remove('active');
