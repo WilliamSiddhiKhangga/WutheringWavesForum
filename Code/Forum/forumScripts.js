@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     postForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-
         const showPostTitle = postTitleInput.value.trim();
         const showPostDesc = postDescInput.value.trim();
 
