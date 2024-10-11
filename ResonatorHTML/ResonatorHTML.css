@@ -153,10 +153,57 @@ h1 {
     border-radius: 5px;
 }
 
+/* Skills Section */
+.skills-section {
+    background-color: #2a2a3d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.skills-section h2 {
+    font-size: 22px;
+    color: gold;
+}
+
+.skillLogo{
+    width: 70px;
+    vertical-align: middle;
+}
+
+.highlight{
+    color: gold;
+}
+
+/* Resonance Chain */
+.resonanceChain-section {
+    background-color: #2a2a3d;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.resonanceChain-section h2 {
+    font-size: 22px;
+    color: gold;
+}
+
 /* Adjustments for smaller screens */
 @media (max-width: 900px) {
     .overview-section {
-        width: 90%;  /* Adjust width for smaller screens */
+        width: 90%; 
         font-size: 14px;
     }
 
@@ -167,28 +214,6 @@ h1 {
     .overview-section .summary {
         font-size: 13px;
     }
-}
-
-/* Skills section styling */
-.skills-section {
-    position: absolute;
-    background-color: #1d1d1d;
-    border-radius: 10px;
-    padding: 20px;
-    width: 80%;
-    margin-top: 540px;
-    text-align: left; 
-}
-
-.skills-content img {
-    width: 100px;
-    float: left;
-    margin-right: 10px;
-}
-
-.skills-content p {
-    margin-top: 0;
-    color: white;
 }
 
 /* RESPONSIVE DESIGN */
