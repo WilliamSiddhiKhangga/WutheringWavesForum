@@ -1,4 +1,4 @@
-/*  weapon Archive  */
+/*  echoes Archive  */
 body{
     background: #162938;
     font-family: Arial, Helvetica, sans-serif;
@@ -12,7 +12,7 @@ h1{
     color: rgb(221, 220, 220);
 }
 
-.weapons-category{
+.echoes-category{
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -44,7 +44,7 @@ button.active:hover{
     background: rgb(128, 208, 255);
 }
 
-.weapons.hide{
+.echoes.hide{
     display: none;
 }
 
@@ -52,8 +52,8 @@ button.active:hover{
     display: flex;
 }
 
-/* weapons Section */
-.weapons-section{
+/* echoes Section */
+.echoes-section{
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     width: 100%;
@@ -61,11 +61,11 @@ button.active:hover{
     gap: 20px;
 }
 
-.weapons-section::-webkit-scrollbar{
+.echoes-section::-webkit-scrollbar{
     display: none;
 }
 
-.weapons-img{
+.echoes-img{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -74,18 +74,18 @@ button.active:hover{
     margin-bottom: 10px;
 }
 
-.weapons-img figure{
+.echoes-img figure{
     flex-grow: 1;
     flex-basis: 300px;
     text-align: center;
     cursor: pointer;
 }
 
-.weapons-img figure:hover{
+.echoes-img figure:hover{
     transform: scale(1.15);
 }
 
-.weapons-img a{
+.echoes-img a{
     color: black;
 }
 
@@ -98,21 +98,21 @@ button.active:hover{
     margin-bottom: 10px;
 }
 
-/* b5 weapons */
-.b5{
+/* cost 4 echoes */
+.cost4{
     width: 190px;
     position: relative;
     overflow: hidden;
 }
 
-.b5 img{
+.cost4 img{
     border-radius: 10px;
-    background-color: rgb(208, 181, 29);
+    background-color: rgb(47, 59, 68);
     background-image: linear-gradient(to top, white, rgb(255, 242, 0), rgb(255, 187, 0));
     border: 5px solid rgb(201, 174, 19);
 }
 
-.b5 figcaption{
+.cost4 figcaption{
     position: absolute;
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
@@ -122,28 +122,59 @@ button.active:hover{
     margin-left: 5px;
 }
 
-.b5:hover figcaption{
-    bottom: 4.7px;
+.cost4:hover figcaption{
+    bottom: 8.5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-/* b4 weapons */
-.b4{
+/* cost 3 echoes */
+.cost3{
     width: 190px;
     position: relative;
     overflow: hidden;
 }
 
-.b4 img{
+.cost3 img{
     border-radius: 10px;
     background-color: rgb(124, 6, 171);
     background-image: linear-gradient(to top, rgb(244, 233, 250), rgb(181, 2, 181), rgb(113, 1, 144));
     border: 5px solid rgb(124, 6, 171);
 }
 
-.b4 figcaption{
+.cost3 figcaption{
+    position: absolute;
+    bottom: -70px;
+    background-color: rgba(204, 204, 204, 0.76);
+    padding: 12px;
+    width: 82%;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.cost3:hover figcaption{
+    bottom: 8.5px;
+    transition: all 100ms;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* cost 1 echoes */
+.cost1{
+    width: 190px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cost1 img{
+    border-radius: 10px;
+    background-color: rgb(124, 6, 171);
+    background-image: linear-gradient(to top, rgb(244, 233, 250), rgb(7, 151, 235), rgb(21, 161, 255));
+    border: 5px solid rgb(10, 141, 202);
+}
+
+.cost1 figcaption{
     position: absolute;
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
@@ -153,8 +184,8 @@ button.active:hover{
     margin-left: 5px;
 }
 
-.b4:hover figcaption{
-    bottom: 5.3px;
+.cost1:hover figcaption{
+    bottom: 8.5px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
