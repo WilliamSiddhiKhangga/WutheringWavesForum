@@ -204,3 +204,45 @@ footer:hover .scroll-up {
     opacity: 1;
     pointer-events: all;
 }
+
+
+@media (max-width: 920px) {
+    .header {
+        text-align: left;
+    }
+    
+    .header h2 {
+        transform: translate(0%);
+        margin-left: 25%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    footer {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 720px) {
+    .header h2 {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 620px) {
+    .header h2{
+        display: none;
+    }
+
+    .footer-content {
+        height: 40px;
+    }
+}
+
+@media (max-width: 440px) {
+    .footer-content {
+        height: 40px;
+    }
+}
