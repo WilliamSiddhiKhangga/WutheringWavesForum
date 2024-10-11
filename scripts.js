@@ -232,3 +232,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     handleScrollEffects();
 });
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.querySelector('footer').classList.remove('hidden');
+    }, 3000); 
+});

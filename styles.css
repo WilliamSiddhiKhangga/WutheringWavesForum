@@ -413,9 +413,9 @@ button.next {
     transition: transform 0.3s ease;
 }
 
-#profile:hover {
-    transform: scale(1.02); /* Efek zoom saat hover */
-}
+/* #profile:hover {
+    transform: scale(1.02);
+} */
 
 .profile-title h2 {
     text-align: center;
