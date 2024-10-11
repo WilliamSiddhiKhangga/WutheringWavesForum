@@ -46,12 +46,12 @@
     
         <!-- Add Post Form -->
         <div class="add-post-popup" id="post-form">
-            <span class="icon-close" onclick="closePostForm()">
-                <a style="font-family: Arial, Helvetica, sans-serif;">X</a>
-            </span>
-
+            
             <div class="post-popup-header">
                 <h2>Add Post</h2>
+                <span class="icon-close" onclick="closePostForm()">
+                    <a style="font-family: Arial, Helvetica, sans-serif;">X</a>
+                </span>
             </div>
 
             <div class="add-post-form">  
@@ -59,6 +59,16 @@
                     <div class="input-title input-label">
                         <label>Title</label>
                         <input id="post-title-input" type="text" name="title" placeholder="Post Title" maxlength="200" required>
+                    </div>
+
+                    <div class="drop-area">
+                        <h2>Upload Image</h2>
+                        <label id="input-label">
+                            <input type="file" accept="image/*" class="input-file" id="input-file" hidden>
+                            <div class="img-view" id="img-view">
+                                <img id="post-img" src="/Images/Forum-Images/no-image-default.png">
+                            </div>
+                        </label>
                     </div>
                     
                     <div class="input-desc input-label">
@@ -84,6 +94,10 @@
 
                 <div class="show-post-title" id="show-post-title">
                     <h2>Opinion on Xiangli Yao?</h2> 
+                </div>
+
+                <div class="show-post-image">
+                    <img src="/Images/Resonators/Xiangli_Yao_Full_Sprite.webp">
                 </div>
                 
                 <div class="show-post-description" id="show-post-desc">
@@ -159,6 +173,10 @@
 
                 <div class="show-post-title" id="posts-title">
                     <h2>My new fav character, changli</h2> 
+                </div>
+
+                <div class="show-post-image">
+                    <img src="/Images/Resonators/Changli-removebg-preview.png">
                 </div>
                 
                 <div class="show-post-description" id="posts-desc">
