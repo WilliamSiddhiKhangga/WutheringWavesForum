@@ -414,3 +414,44 @@ body::-webkit-scrollbar-track {
         left: 10%;
     }
 }
+
+.post-options {
+    position: relative;
+    right: 10px;
+    display: contents;
+}
+
+.post-options i {
+    cursor: pointer;
+    right: 20px;
+    top: 15px;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+}
+
+.post-options-dropdown {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(41, 64, 64);
+    z-index: 1;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.post-options-dropdown li {
+    cursor: pointer;
+    padding: 0px;
+    color: white;
+}
+
+.post-options-dropdown:hover {
+    background-color: rgb(49, 91, 117)
+}
+
+.post-options-dropdown {
+    display: none;
+}
