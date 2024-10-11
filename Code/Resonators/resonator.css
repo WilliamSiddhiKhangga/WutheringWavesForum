@@ -79,6 +79,10 @@ h1{
     cursor: pointer;
 }
 
+.character-img figure:hover{
+    transform: scale(1.15);
+}
+
 .character-img a{
     color: black;
 }
@@ -92,6 +96,7 @@ h1{
     margin-bottom: 10px;
 }
 
+/* b5 characters */
 .b5{
     width: 180px;
     position: relative;
@@ -122,6 +127,7 @@ h1{
     border-bottom-right-radius: 5px;
 }
 
+/* b4 characters */
 .b4{
     width: 180px;
     position: relative;
@@ -152,5 +158,32 @@ h1{
     border-bottom-right-radius: 5px;
 }
 
-.search{
+/* search */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+}
+
+.search button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    box-shadow: black;
+    background-color: #3b596b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #0690da;
 }

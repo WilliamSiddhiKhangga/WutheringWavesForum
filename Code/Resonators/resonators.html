@@ -7,13 +7,17 @@
         <link rel="stylesheet" href="/styles.css"/>
         <link rel="stylesheet" href="/headerFooterStyles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="resonators.js" defer></script>
     </head>
 
     <body onload="highlightNavbar('/resonators.html', 'resonators'); headerTitleController('Resonators');"">
         <script src="/navbarScripts.js"></script>
         <script src="/headerScripts.js"></script>
-        
+        <script src="/scripts.js"></script>
+        <script src="resonators.js" defer></script>
+        <script src="/Code/Resonators/search.js"></script>
+                                                
         <header>
             <div class="header">
                 <div class="hamburger" id="hamburger">
@@ -21,13 +25,13 @@
                     <span></span>
                     <span></span>
                 </div>
-                <button class="login-btn" id="loginBtn">Login</button>
+                <!-- <button class="login-btn" id="loginBtn">Login</button> -->
             </div>
         </header>
 
         <nav class="nav-bar" id="nav-bar">
             <ul id="nav-bar-ul">
-                <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+                <li id="home"><a href="/index.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
                 <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
                 <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
                 <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
@@ -56,6 +60,11 @@
                         <button data-name="glacio">Glacio</button>
                     </div>
 
+                    <div class="search">
+                        <input type="search" placeholder="search character.......">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+
                     <div class="filterable">
                         <div class="character" data-name="electro">
                             <figure class="b5">
@@ -79,7 +88,7 @@
                         <div class="character" data-name="spectro">
                             <figure class="b5">
                                 <a href="/ResonatorHTML/Jinshi.html">
-                                <img width="180px" src="\Images\Resonators\Jinshi-removebg-preview.png" alt="Jinshi">
+                                <img width="180px" src="/Images/Resonators/Jinshi-removebg-preview.png" alt="Jinshi">
                                 <figcaption>Jinshi</figcaption>
                                 </a>
                             </figure>
@@ -87,8 +96,10 @@
 
                         <div class="character" data-name="electro">
                             <figure class="b4">
+                                <a href="/ResonatorHTML/Yuanwu.html">
                                 <img width="180px" src="\Images\Resonators\Yuanwu-removebg-preview.png" alt="Yuan Wu">
                                 <figcaption>Yuan Wu</figcaption>
+                                </a>
                             </figure>
                         </div>
 
@@ -106,6 +117,24 @@
                             </figure>
                         </div>
 
+                        <div class="character" data-name="glacio">
+                            <figure class="b4">
+                                <a href="/ResonatorHTML/Baizhi.html">
+                                <img width="180px" src="\Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
+                                <figcaption>Baizhi</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="character" data-name="havoc">
+                            <figure class="b4">
+                                <a href="">
+                                <img width="180px" height="245px" src="/Images/Resonators/Taoqi-removebg-preview.png" alt="Taoqi">
+                                <figcaption>Taoqi</figcaption>
+                                </a>
+                            </figure>
+                        </div>
+
                         <div class="character" data-name="aero">
                             <figure class="b5">
                                 <img width="180px" src="\Images\Resonators\Jiyan-removebg-preview.png" alt="Jiyan">
@@ -120,13 +149,6 @@
                             </figure>
                         </div>
 
-                        <div class="character" data-name="glacio">
-                            <figure class="b4">
-                                <img width="180px" src="\Images\Resonators\Baizi-removebg-preview.png" alt="Baizhi">
-                                <figcaption>Baizhi</figcaption>
-                            </figure>
-                        </div>
-
                         <div class="character" data-name="fusion">
                             <figure class="b4">
                                 <img width="180px" src="\Images\Resonators\Mortefi-removebg-preview.png" alt="Mortefi">
@@ -137,5 +159,20 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="footer-content">
+                <p>Thank you for visiting! Find us on social media for more updates.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p><strong>&copy; 2024 SK Group</strong></p>
+                <a href="#" class="scroll-up" title="Scroll to top">&#9650;</a>
+            </div>
+        </footer>
     </body>
 </html>

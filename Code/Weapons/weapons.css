@@ -1,5 +1,7 @@
-/*  Resonator Archive  */
+/*  weapon Archive  */
 body{
+    background: #162938;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(26, 36, 45);
 }
 
@@ -10,7 +12,7 @@ h1{
     color: rgb(221, 220, 220);
 }
 
-.element-category{
+.weapons-category{
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -79,6 +81,10 @@ button.active:hover{
     cursor: pointer;
 }
 
+.weapons-img figure:hover{
+    transform: scale(1.15);
+}
+
 .weapons-img a{
     color: black;
 }
@@ -92,6 +98,7 @@ button.active:hover{
     margin-bottom: 10px;
 }
 
+/* b5 weapons */
 .b5{
     width: 190px;
     position: relative;
@@ -102,7 +109,7 @@ button.active:hover{
     border-radius: 10px;
     background-color: rgb(208, 181, 29);
     background-image: linear-gradient(to top, white, rgb(255, 242, 0), rgb(255, 187, 0));
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(201, 174, 19);
 }
 
 .b5 figcaption{
@@ -116,14 +123,15 @@ button.active:hover{
 }
 
 .b5:hover figcaption{
-    bottom: 5px;
+    bottom: 4.7px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
+/* b4 weapons */
 .b4{
-    width: 180px;
+    width: 190px;
     position: relative;
     overflow: hidden;
 }
@@ -132,7 +140,7 @@ button.active:hover{
     border-radius: 10px;
     background-color: rgb(124, 6, 171);
     background-image: linear-gradient(to top, rgb(244, 233, 250), rgb(181, 2, 181), rgb(113, 1, 144));
-    border: 5px solid rgb(0, 0, 0);
+    border: 5px solid rgb(124, 6, 171);
 }
 
 .b4 figcaption{
@@ -140,17 +148,44 @@ button.active:hover{
     bottom: -50px;
     background-color: rgba(204, 204, 204, 0.76);
     padding: 12px;
-    width: 94.8%;
+    width: 82%;
     text-align: center;
     margin-left: 5px;
 }
 
 .b4:hover figcaption{
-    bottom: 5px;
+    bottom: 5.3px;
     transition: all 100ms;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.search{
+/* search */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    flex-grow: 1;
+}
+
+.search button {
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    box-shadow: black;
+    background-color: #3b596b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #0690da;
 }

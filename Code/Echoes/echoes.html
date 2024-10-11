@@ -1,37 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Echoes</title>
-    <link rel="stylesheet" href="/navbarStyles.css">
-    <link rel="stylesheet" href="/headerFooterStyles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body onload="highlightNavbar('/echoes.html', 'echoes'); headerTitleController('Echoes');" style="background-color: rgb(26, 36, 45);">
-    <script src="/navbarScripts.js"></script>
-    <script src="/headerScripts.js"></script>
-
-
-    <header>
-        <div class="header">
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Echoes</title>
+        <link rel="stylesheet" href="/navbarStyles.css">
+        <link rel="stylesheet" href="/headerFooterStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="/Code/Echoes/echoes.css" />
+    </head>
+    <body onload="highlightNavbar('/echoes.html', 'echoes'); headerTitleController('Echoes');" style="background-color: rgb(26, 36, 45);">
+        <script src="/navbarScripts.js"></script>
+        <script src="/headerScripts.js"></script>
+        <script src="/Code/Echoes/search.js"></script>
+        <script src="/Code/Echoes/echoes.js" defer></script>
+        
+        <header>
+            <div class="header">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button class="login-btn" id="loginBtn">Login</button>
             </div>
-            <button class="login-btn" id="loginBtn">Login</button>
-        </div>
-    </header>
+        </header>
 
-    <nav class="nav-bar" id="nav-bar">
-        <ul id="nav-bar-ul">
-            <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
-            <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
-            <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
-            <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
-            <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
-        </ul>
-    </nav>
-</body>
+        <nav class="nav-bar" id="nav-bar">
+            <ul id="nav-bar-ul">
+                <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+                <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
+                <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
+                <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
+                <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
+            </ul>
+        </nav>
+
+        <h1>Echoes Archive</h1>
+        <br>
+        <div class="echoes-section">
+            <div class="echoes-img">
+                <div class="echoes_category">
+                    <button class="active" data-name="all">Show all</button>
+                    <button data-name="cost4">Cost 4</button>
+                    <button data-name="cost3">Cost 3</button>
+                    <button data-name="cost1">Cost 1</button>
+                </div>
+
+                <div class="search">
+                    <input type="search" placeholder="search echo.......">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+
+                <div class="filterable">
+                    <div class="echoes" data-name="cost4">
+                        <figure class="cost4">
+                            <a href="/Code/Echoes/EchoesHTML/InfernoRider.html">
+                            <img width="180px" src="/Images/Echo/infernorider.png" alt="Inferno rider">
+                            <figcaption>Inferno Rider</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost4">
+                        <figure class="cost4">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/jue.png" alt="Jue">
+                            <figcaption>Jue</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost3">
+                        <figure class="cost3">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/dreadmane.png" alt="dreadmane">
+                            <figcaption>Dreadmane</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost1">
+                        <figure class="cost1">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/gulpuff.png" alt="Gulpuff">
+                            <figcaption>Gulpuff</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost1">
+                        <figure class="cost1">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/clangbang.png" alt="ClangBang">
+                            <figcaption>ClangBang</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost1">
+                        <figure class="cost1">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/fusionprism.png" alt="Fusion Prism">
+                            <figcaption>Fusion Prism</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost4">
+                        <figure class="cost4">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/feilianBeringal.png" alt="Feilian Beringal">
+                            <figcaption>Feilian Beringal</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                    <div class="echoes" data-name="cost3">
+                        <figure class="cost3">
+                            <a href="">
+                            <img width="180px" src="/Images/Echo/violetheron.png" alt="Violet-Feathered Heron">
+                            <figcaption>Violet-Feathered Heron</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
