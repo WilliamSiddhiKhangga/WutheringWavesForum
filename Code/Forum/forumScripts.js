@@ -82,6 +82,27 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.createElement('h4');
         username.textContent = defName;
 
+        const postOptions = document.createElement('div');
+        postOptions.classList.add('post-options');
+
+        const threeDot = document.createElement('i');
+        threeDot.classList.add('fa', 'fa-ellipsis-v');
+
+        threeDot.addEventListener('click', function() {
+            toggleOptions(threeDot);
+        });
+
+        const postOptionsDropdown = document.createElement('ul');
+        postOptionsDropdown.classList.add('post-options-dropdown');
+        postOptionsDropdown.style.display = 'none';
+        postOptionsDropdown.innerHTML = `<li onclick="deletePost(this)">Delete Post</li>`;
+
+        postOptions.appendChild(threeDot);
+        postOptions.appendChild(postOptionsDropdown);
+
+
+        showProfileOnPost.appendChild(postOptions);
+
         const postTitleDiv = document.createElement('div');
         postTitleDiv.classList.add('show-post-title');
         postTitleDiv.innerHTML = `<h2>${post.title}</h2>`;
@@ -142,3 +163,26 @@ document.addEventListener('DOMContentLoaded', function() {
         showPosts.appendChild(showIndivPost);
     }
 });
+
+function toggleOptions(el) {
+    const dropdown = el.nextElementSibling;
+    if (dropdown.style.display === "none" || dropdown.style.display === "") {
+        dropdown.style.display = "block";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+
+function deletePost(el) {
+    const postElement = el.closest('.show-individual-post');
+    postElement.remove();
+    
+    const postTitle = postElement.querySelector('.show-post-title h2').innerText;
+    removePostFromLocalStorage(postTitle);
+}
+
+function removePostFromLocalStorage(postTitle) {
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+    posts = posts.filter(post => post.title !== postTitle);
+    localStorage.setItem('posts', JSON.stringify(posts));
+}
