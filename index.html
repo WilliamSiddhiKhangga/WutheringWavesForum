@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forum Wuthering Waves</title>
+    <title>Main Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbarStyles.css">
     <link rel="stylesheet" href="headerFooterStyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body class="body-home" onload="highlightNavbar('/index.html', 'home'); headerTitleController('Wuthering Waves');">
-    <!-- <audio id="background-music" autoplay loop muted>
-        <source src="Audio/wuwa.mp3" type="audio/mpeg">
-    </audio> -->
-
+<body class="body-home" onload="showTab('News'); highlightNavbar('/index.html', 'home'); headerTitleController('Wuthering Waves');">
     <script src="navbarScripts.js"></script>
     <script src="headerScripts.js"></script>
-
     <header>
         <div class="header">
             <div class="hamburger" id="hamburger">
@@ -25,105 +21,111 @@
                 <span></span>
                 <span></span>
             </div>
+            <nav class="navigation">
+                <a href="#" data-tab="profile" id="profile-icon" class="hidden">
+                    <i class="fas fa-user-circle"></i></a> 
+            </nav>
             <button class="login-btn" id="loginBtn">Login</button>
         </div>
     </header>
 
     <nav class="nav-bar" id="nav-bar">
         <ul id="nav-bar-ul">
-            <li id="home"><a href="/main.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
+            <li id="home"><a href="/index.html?tab=News"><img src="/Images/Navbar-Icons/home-icon.png">Home</a></li>
             <li id="resonators"><a href="/Code/Resonators/resonators.html"><img src="/Images/Navbar-Icons/images.jpeg">Resonators</a></li>
             <li id="weapons"><a href="/Code/Weapons/weapons.html"><img src="/Images/Navbar-Icons/download-removebg-preview.png">Weapons</a></li>
             <li id="echoes"><a href="/Code/Echoes/echoes.html"><img src="/Images/Navbar-Icons/image-removebg-preview.png">Echoes</a></li>
             <li id="forum"><a href="/Code/Forum/forum.html"><i class="fa-solid fa-bullhorn"></i>Forum</a></li>
         </ul>
     </nav>
-
+    
     <div class="content-container">
-        <!-- <header>
-            <nav class="navigation">
-                <a href="index.html?tab=about">About</a>
-                <a href="index.html?tab=News">News</a>
-                <a href="index.html?tab=contact">Contact</a>
-                <button class="btnLogin-popup">Login</button>
-            </nav>        
-        </header> -->
-    
-        <div class="wrapper">
-                <span class="icon-close">
-                    <i class="fas fa-times"></i>
-                </span>
-    
-            <div class="form-box login">
-                <h2>Login</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <input type="email" required>
-                        <label>Email</label>
+        <section id="News" class="tab-content" style="display:none;">
+            <h2>News</h2>
+            <div class="news-slider-wrapper">
+                <div class="news-slider">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slider-container">
+                        <div class="news-slide" id="slide-1">
+                            <div class="news-slide-content">
+                                <img src="Images/Home-Images/home-news-1.avif" alt="News 1">
+                                <h3 class="headline">On Going Banner this version..</h3>
+                            </div>
+                        </div>
+                        <div class="news-slide">
+                            <div class="news-slide-content" id="slide-">
+                                <img src="Images/Home-Images/home-news-2.jpg" alt="News 2">
+                                <h3 class="headline">MT. Fimament Explained..!!</h3>
+                            </div>
+                        </div>
+                        <div class="news-slide">
+                            <div class="news-slide-content" id="slide-3">
+                                <img src="Images/Home-Images/home-news-3.jpg" alt="News 3">
+                                <h3 class="headline">Free supplies in next update???</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> Remember me</label>
-                        <a href="#">Forgot Password?</a>
-                    </div>
-                    <button type="submit" class="btn">Login</button>
-                    <div class="login-register">
-                        <p>Don't have an account? 
-                            <a href="#"
-                            class="register-link">Register</a>
-                        </p>
-                    </div>
-                </form>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
             </div>
-    
-            <div class="form-box register">
-                <h2>Registration</h2>
-                <form action="#">
-                    <div class="input-box">
-                        <span class="icon">
-                            <i class="fas fa-user"></i>
-                        </span>
-                        <input type="text" required>
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                        <input type="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <i class="fas fa-lock"></i>
-                        </span>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox"> I agree to the terms & conditions</label>
-                    </div>
-                    <button type="submit" 
-                    class="btn">Register</button>
-                    <div class="login-register">
-                        <p>Already have an account? 
-                            <a href="#"
-                            class="login-link">Login</a>
-                        </p>
-                    </div>
-                </form>
+
+            <!-- Event Banner Section -->
+            <h2 class="current-banner-title">Current Banner</h2>
+            <div class="event-banner-section">
+                <div class="event-banner">
+                    <img src="Images/Home-Images/zhezhi-intro.jpg" alt="Event 2 Banner">
+                    <h3>Event 1: Chromatic Prose</h3>
+                </div>
+                <div class="event-banner">
+                    <img src="Images/Home-Images/xiangli-yao-intro.jpg" alt="Event 1 Banner">
+                    <h3>Event 2: Celestial Revelation</h3>
+                </div>
             </div>
-        </div>
+        </section>              
+
+        <section id="profile" class="tab-content hidden">
+            <div class="profile-title">
+                <h2>My Profile</h2> 
+            </div>
+            <div class="profile-container">
+                <!-- Foto Profil -->
+                <div class="profile-photo">
+                    <img src="Images/Resonators/Changli-removebg-preview.png" alt="Profile Photo">
+                </div>
+                <!-- Informasi Pengguna -->
+                <div class="profile-info">
+                    <h3>Nama Pengguna : Pacar ChangLi</h3>
+                    <p><strong>Username:</strong> FallenSKy51</p>
+                    <p><strong>Email:</strong> email@contoh.com</p>
+                    <p><strong>Lokasi:</strong> Jakarta, Indonesia</p>
+                    <p><strong>Tanggal Bergabung:</strong> 1 Januari 2022</p>
+                    <div class="bio-container">
+                        <p><strong>Bio:</strong></p>
+                        <textarea id="bio" rows="4" placeholder="Cuman Main Changli."></textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            <p>Thank you for visiting! Find us on social media for more updates.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p><strong>&copy; 2024 SK Group</strong></p>
+            <a href="#" class="scroll-up" title="Scroll to top">&#9650;</a>
+        </div>
+    </footer>
+
     <script src="scripts.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
